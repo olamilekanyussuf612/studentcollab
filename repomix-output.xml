@@ -1,0 +1,5299 @@
+This file is a merged representation of the entire codebase, combined into a single document by Repomix.
+
+<file_summary>
+This section contains a summary of this file.
+
+<purpose>
+This file contains a packed representation of the entire repository's contents.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+</purpose>
+
+<file_format>
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Repository files (if enabled)
+5. Multiple file entries, each consisting of:
+  - File path as an attribute
+  - Full contents of the file
+</file_format>
+
+<usage_guidelines>
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+</usage_guidelines>
+
+<notes>
+- Some files may have been excluded based on .gitignore rules and Repomix's configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Files matching patterns in .gitignore are excluded
+- Files matching default ignore patterns are excluded
+- Files are sorted by Git change count (files with more changes are at the bottom)
+</notes>
+
+</file_summary>
+
+<directory_structure>
+client/
+  public/
+    favicon.svg
+    icons.svg
+  src/
+    components/
+      AppHeader.jsx
+      AppNav.jsx
+      AuthScreen.jsx
+      Avatar.jsx
+      BrandPanel.jsx
+      composer.jsx
+      ConfirmDialog.jsx
+      EmptyState.jsx
+      LoadingScreen.jsx
+      PostCard.jsx
+      Skeleton.jsx
+      Toast.jsx
+    hooks/
+      useconfirm.js
+    lib/
+      api.js
+      firebase.js
+      format.js
+    pages/
+      Home.jsx
+      Profile.jsx
+      Tools.jsx
+      ToolView.jsx
+    tools/
+      AIAssistant.jsx
+      Calculator.jsx
+      Notepad.jsx
+      Study.jsx
+    App.jsx
+    main.jsx
+    styles.css
+  .gitignore
+  eslint.config.js
+  index.html
+  package.json
+  README.md
+  vite.config.js
+server/
+  db.json
+  package.json
+  server.js
+.gitignore
+package.json
+README.MD
+</directory_structure>
+
+<files>
+This section contains the contents of the repository's files.
+
+<file path="client/public/favicon.svg">
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="46" fill="none" viewBox="0 0 48 46"><path fill="#863bff" d="M25.946 44.938c-.664.845-2.021.375-2.021-.698V33.937a2.26 2.26 0 0 0-2.262-2.262H10.287c-.92 0-1.456-1.04-.92-1.788l7.48-10.471c1.07-1.497 0-3.578-1.842-3.578H1.237c-.92 0-1.456-1.04-.92-1.788L10.013.474c.214-.297.556-.474.92-.474h28.894c.92 0 1.456 1.04.92 1.788l-7.48 10.471c-1.07 1.498 0 3.579 1.842 3.579h11.377c.943 0 1.473 1.088.89 1.83L25.947 44.94z" style="fill:#863bff;fill:color(display-p3 .5252 .23 1);fill-opacity:1"/><mask id="a" width="48" height="46" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha"><path fill="#000" d="M25.842 44.938c-.664.844-2.021.375-2.021-.698V33.937a2.26 2.26 0 0 0-2.262-2.262H10.183c-.92 0-1.456-1.04-.92-1.788l7.48-10.471c1.07-1.498 0-3.579-1.842-3.579H1.133c-.92 0-1.456-1.04-.92-1.787L9.91.473c.214-.297.556-.474.92-.474h28.894c.92 0 1.456 1.04.92 1.788l-7.48 10.471c-1.07 1.498 0 3.578 1.842 3.578h11.377c.943 0 1.473 1.088.89 1.832L25.843 44.94z" style="fill:#000;fill-opacity:1"/></mask><g mask="url(#a)"><g filter="url(#b)"><ellipse cx="5.508" cy="14.704" fill="#ede6ff" rx="5.508" ry="14.704" style="fill:#ede6ff;fill:color(display-p3 .9275 .9033 1);fill-opacity:1" transform="matrix(.00324 1 1 -.00324 -4.47 31.516)"/></g><g filter="url(#c)"><ellipse cx="10.399" cy="29.851" fill="#ede6ff" rx="10.399" ry="29.851" style="fill:#ede6ff;fill:color(display-p3 .9275 .9033 1);fill-opacity:1" transform="matrix(.00324 1 1 -.00324 -39.328 7.883)"/></g><g filter="url(#d)"><ellipse cx="5.508" cy="30.487" fill="#7e14ff" rx="5.508" ry="30.487" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(89.814 -25.913 -14.639)scale(1 -1)"/></g><g filter="url(#e)"><ellipse cx="5.508" cy="30.599" fill="#7e14ff" rx="5.508" ry="30.599" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(89.814 -32.644 -3.334)scale(1 -1)"/></g><g filter="url(#f)"><ellipse cx="5.508" cy="30.599" fill="#7e14ff" rx="5.508" ry="30.599" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="matrix(.00324 1 1 -.00324 -34.34 30.47)"/></g><g filter="url(#g)"><ellipse cx="14.072" cy="22.078" fill="#ede6ff" rx="14.072" ry="22.078" style="fill:#ede6ff;fill:color(display-p3 .9275 .9033 1);fill-opacity:1" transform="rotate(93.35 24.506 48.493)scale(-1 1)"/></g><g filter="url(#h)"><ellipse cx="3.47" cy="21.501" fill="#7e14ff" rx="3.47" ry="21.501" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(89.009 28.708 47.59)scale(-1 1)"/></g><g filter="url(#i)"><ellipse cx="3.47" cy="21.501" fill="#7e14ff" rx="3.47" ry="21.501" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(89.009 28.708 47.59)scale(-1 1)"/></g><g filter="url(#j)"><ellipse cx=".387" cy="8.972" fill="#7e14ff" rx="4.407" ry="29.108" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(39.51 .387 8.972)"/></g><g filter="url(#k)"><ellipse cx="47.523" cy="-6.092" fill="#7e14ff" rx="4.407" ry="29.108" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(37.892 47.523 -6.092)"/></g><g filter="url(#l)"><ellipse cx="41.412" cy="6.333" fill="#47bfff" rx="5.971" ry="9.665" style="fill:#47bfff;fill:color(display-p3 .2799 .748 1);fill-opacity:1" transform="rotate(37.892 41.412 6.333)"/></g><g filter="url(#m)"><ellipse cx="-1.879" cy="38.332" fill="#7e14ff" rx="4.407" ry="29.108" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(37.892 -1.88 38.332)"/></g><g filter="url(#n)"><ellipse cx="-1.879" cy="38.332" fill="#7e14ff" rx="4.407" ry="29.108" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(37.892 -1.88 38.332)"/></g><g filter="url(#o)"><ellipse cx="35.651" cy="29.907" fill="#7e14ff" rx="4.407" ry="29.108" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(37.892 35.651 29.907)"/></g><g filter="url(#p)"><ellipse cx="38.418" cy="32.4" fill="#47bfff" rx="5.971" ry="15.297" style="fill:#47bfff;fill:color(display-p3 .2799 .748 1);fill-opacity:1" transform="rotate(37.892 38.418 32.4)"/></g></g><defs><filter id="b" width="60.045" height="41.654" x="-19.77" y="16.149" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="7.659"/></filter><filter id="c" width="90.34" height="51.437" x="-54.613" y="-7.533" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="7.659"/></filter><filter id="d" width="79.355" height="29.4" x="-49.64" y="2.03" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="e" width="79.579" height="29.4" x="-45.045" y="20.029" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="f" width="79.579" height="29.4" x="-43.513" y="21.178" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="g" width="74.749" height="58.852" x="15.756" y="-17.901" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="7.659"/></filter><filter id="h" width="61.377" height="25.362" x="23.548" y="2.284" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="i" width="61.377" height="25.362" x="23.548" y="2.284" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="j" width="56.045" height="63.649" x="-27.636" y="-22.853" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="k" width="54.814" height="64.646" x="20.116" y="-38.415" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="l" width="33.541" height="35.313" x="24.641" y="-11.323" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="m" width="54.814" height="64.646" x="-29.286" y="6.009" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="n" width="54.814" height="64.646" x="-29.286" y="6.009" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="o" width="54.814" height="64.646" x="8.244" y="-2.416" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="p" width="39.409" height="43.623" x="18.713" y="10.588" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter></defs></svg>
+</file>
+
+<file path="client/public/icons.svg">
+<svg xmlns="http://www.w3.org/2000/svg">
+  <symbol id="bluesky-icon" viewBox="0 0 16 17">
+    <g clip-path="url(#bluesky-clip)"><path fill="#08060d" d="M7.75 7.735c-.693-1.348-2.58-3.86-4.334-5.097-1.68-1.187-2.32-.981-2.74-.79C.188 2.065.1 2.812.1 3.251s.241 3.602.398 4.13c.52 1.744 2.367 2.333 4.07 2.145-2.495.37-4.71 1.278-1.805 4.512 3.196 3.309 4.38-.71 4.987-2.746.608 2.036 1.307 5.91 4.93 2.746 2.72-2.746.747-4.143-1.747-4.512 1.702.189 3.55-.4 4.07-2.145.156-.528.397-3.691.397-4.13s-.088-1.186-.575-1.406c-.42-.19-1.06-.395-2.741.79-1.755 1.24-3.64 3.752-4.334 5.099"/></g>
+    <defs><clipPath id="bluesky-clip"><path fill="#fff" d="M.1.85h15.3v15.3H.1z"/></clipPath></defs>
+  </symbol>
+  <symbol id="discord-icon" viewBox="0 0 20 19">
+    <path fill="#08060d" d="M16.224 3.768a14.5 14.5 0 0 0-3.67-1.153c-.158.286-.343.67-.47.976a13.5 13.5 0 0 0-4.067 0c-.128-.306-.317-.69-.476-.976A14.4 14.4 0 0 0 3.868 3.77C1.546 7.28.916 10.703 1.231 14.077a14.7 14.7 0 0 0 4.5 2.306q.545-.748.965-1.587a9.5 9.5 0 0 1-1.518-.74q.191-.14.372-.293c2.927 1.369 6.107 1.369 8.999 0q.183.152.372.294-.723.437-1.52.74.418.838.963 1.588a14.6 14.6 0 0 0 4.504-2.308c.37-3.911-.63-7.302-2.644-10.309m-9.13 8.234c-.878 0-1.599-.82-1.599-1.82 0-.998.705-1.82 1.6-1.82.894 0 1.614.82 1.599 1.82.001 1-.705 1.82-1.6 1.82m5.91 0c-.878 0-1.599-.82-1.599-1.82 0-.998.705-1.82 1.6-1.82.893 0 1.614.82 1.599 1.82 0 1-.706 1.82-1.6 1.82"/>
+  </symbol>
+  <symbol id="documentation-icon" viewBox="0 0 21 20">
+    <path fill="none" stroke="#aa3bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.35" d="m15.5 13.333 1.533 1.322c.645.555.967.833.967 1.178s-.322.623-.967 1.179L15.5 18.333m-3.333-5-1.534 1.322c-.644.555-.966.833-.966 1.178s.322.623.966 1.179l1.534 1.321"/>
+    <path fill="none" stroke="#aa3bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.35" d="M17.167 10.836v-4.32c0-1.41 0-2.117-.224-2.68-.359-.906-1.118-1.621-2.08-1.96-.599-.21-1.349-.21-2.848-.21-2.623 0-3.935 0-4.983.369-1.684.591-3.013 1.842-3.641 3.428C3 6.449 3 7.684 3 10.154v2.122c0 2.558 0 3.838.706 4.726q.306.383.713.671c.76.536 1.79.64 3.581.66"/>
+    <path fill="none" stroke="#aa3bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.35" d="M3 10a2.78 2.78 0 0 1 2.778-2.778c.555 0 1.209.097 1.748-.047.48-.129.854-.503.982-.982.145-.54.048-1.194.048-1.749a2.78 2.78 0 0 1 2.777-2.777"/>
+  </symbol>
+  <symbol id="github-icon" viewBox="0 0 19 19">
+    <path fill="#08060d" fill-rule="evenodd" d="M9.356 1.85C5.05 1.85 1.57 5.356 1.57 9.694a7.84 7.84 0 0 0 5.324 7.44c.387.079.528-.168.528-.376 0-.182-.013-.805-.013-1.454-2.165.467-2.616-.935-2.616-.935-.349-.91-.864-1.143-.864-1.143-.71-.48.051-.48.051-.48.787.051 1.2.805 1.2.805.695 1.194 1.817.857 2.268.649.064-.507.27-.857.49-1.052-1.728-.182-3.545-.857-3.545-3.87 0-.857.31-1.558.8-2.104-.078-.195-.349-1 .077-2.078 0 0 .657-.208 2.14.805a7.5 7.5 0 0 1 1.946-.26c.657 0 1.328.092 1.946.26 1.483-1.013 2.14-.805 2.14-.805.426 1.078.155 1.883.078 2.078.502.546.799 1.247.799 2.104 0 3.013-1.818 3.675-3.558 3.87.284.247.528.714.528 1.454 0 1.052-.012 1.896-.012 2.156 0 .208.142.455.528.377a7.84 7.84 0 0 0 5.324-7.441c.013-4.338-3.48-7.844-7.773-7.844" clip-rule="evenodd"/>
+  </symbol>
+  <symbol id="social-icon" viewBox="0 0 20 20">
+    <path fill="none" stroke="#aa3bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.35" d="M12.5 6.667a4.167 4.167 0 1 0-8.334 0 4.167 4.167 0 0 0 8.334 0"/>
+    <path fill="none" stroke="#aa3bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.35" d="M2.5 16.667a5.833 5.833 0 0 1 8.75-5.053m3.837.474.513 1.035c.07.144.257.282.414.309l.93.155c.596.1.736.536.307.965l-.723.73a.64.64 0 0 0-.152.531l.207.903c.164.715-.213.991-.84.618l-.872-.52a.63.63 0 0 0-.577 0l-.872.52c-.624.373-1.003.094-.84-.618l.207-.903a.64.64 0 0 0-.152-.532l-.723-.729c-.426-.43-.289-.864.306-.964l.93-.156a.64.64 0 0 0 .412-.31l.513-1.034c.28-.562.735-.562 1.012 0"/>
+  </symbol>
+  <symbol id="x-icon" viewBox="0 0 19 19">
+    <path fill="#08060d" fill-rule="evenodd" d="M1.893 1.98c.052.072 1.245 1.769 2.653 3.77l2.892 4.114c.183.261.333.48.333.486s-.068.089-.152.183l-.522.593-.765.867-3.597 4.087c-.375.426-.734.834-.798.905a1 1 0 0 0-.118.148c0 .01.236.017.664.017h.663l.729-.83c.4-.457.796-.906.879-.999a692 692 0 0 0 1.794-2.038c.034-.037.301-.34.594-.675l.551-.624.345-.392a7 7 0 0 1 .34-.374c.006 0 .93 1.306 2.052 2.903l2.084 2.965.045.063h2.275c1.87 0 2.273-.003 2.266-.021-.008-.02-1.098-1.572-3.894-5.547-2.013-2.862-2.28-3.246-2.273-3.266.008-.019.282-.332 2.085-2.38l2-2.274 1.567-1.782c.022-.028-.016-.03-.65-.03h-.674l-.3.342a871 871 0 0 1-1.782 2.025c-.067.075-.405.458-.75.852a100 100 0 0 1-.803.91c-.148.172-.299.344-.99 1.127-.304.343-.32.358-.345.327-.015-.019-.904-1.282-1.976-2.808L6.365 1.85H1.8zm1.782.91 8.078 11.294c.772 1.08 1.413 1.973 1.425 1.984.016.017.241.02 1.05.017l1.03-.004-2.694-3.766L7.796 5.75 5.722 2.852l-1.039-.004-1.039-.004z" clip-rule="evenodd"/>
+  </symbol>
+</svg>
+</file>
+
+<file path="client/src/components/AppHeader.jsx">
+import { auth } from "../lib/firebase.js";
+import Avatar from "./Avatar.jsx";
+
+export default function AppHeader({ user }) {
+  const name = user.displayName || user.email || "Student";
+
+  return (
+    <header className="app-header">
+      <div className="app-header-left">
+        <div className="app-logo">📚</div>
+        <span className="app-name">Student Collab</span>
+      </div>
+
+      <div className="app-header-right">
+        <div className="user-chip">
+          <Avatar name={name} seed={user.uid} size={32} />
+          <span className="user-name">{name}</span>
+        </div>
+        <button
+          className="logout-btn"
+          onClick={() => auth.signOut()}
+          title="Log out"
+        >
+          Logout
+        </button>
+      </div>
+    </header>
+  );
+}
+</file>
+
+<file path="client/src/components/AppNav.jsx">
+const TABS = [
+  { id: "home", label: "Home", icon: "🏠" },
+  { id: "tools", label: "Tools", icon: "🧰" },
+  { id: "profile", label: "Profile", icon: "👤" }
+];
+
+export default function AppNav({ view, onNavigate }) {
+  return (
+    <nav className="app-nav">
+      {TABS.map((t) => (
+        <button
+          key={t.id}
+          className={view === t.id ? "nav-pill active" : "nav-pill"}
+          onClick={() => onNavigate(t.id)}
+        >
+          <span className="nav-icon">{t.icon}</span>
+          <span>{t.label}</span>
+        </button>
+      ))}
+    </nav>
+  );
+}
+</file>
+
+<file path="client/src/components/AuthScreen.jsx">
+import { useState } from "react";
+import { auth, googleProvider } from "../lib/firebase.js";
+import BrandPanel from "./BrandPanel.jsx";
+
+export default function AuthScreen() {
+  const [mode, setMode] = useState("login");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const [busy, setBusy] = useState(false);
+
+  const submit = async (e) => {
+    e.preventDefault();
+    setError("");
+    setBusy(true);
+    try {
+      if (mode === "signup") {
+        if (!name.trim()) throw new Error("Please enter your name");
+        const cred = await auth.createUserWithEmailAndPassword(email, password);
+        await cred.user.updateProfile({ displayName: name.trim() });
+        await cred.user.reload();
+      } else {
+        await auth.signInWithEmailAndPassword(email, password);
+      }
+    } catch (err) {
+      setError(err.message.replace("Firebase: ", ""));
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  const googleSignIn = async () => {
+    setError("");
+    setBusy(true);
+    try {
+      await auth.signInWithPopup(googleProvider);
+    } catch (err) {
+      setError(err.message.replace("Firebase: ", ""));
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  const isSignup = mode === "signup";
+
+  return (
+    <div className="auth-shell">
+      <BrandPanel />
+
+      <main className="auth-main">
+        <div className="auth-card">
+          <div className="auth-card-head">
+            <h1>{isSignup ? "Create your account" : "Welcome back"}</h1>
+            <p>
+              {isSignup
+                ? "Join your classmates on Student Collab"
+                : "Log in to continue to your feed"}
+            </p>
+          </div>
+
+          <button
+            type="button"
+            className="google-btn"
+            onClick={googleSignIn}
+            disabled={busy}
+          >
+            <img
+              src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"
+              alt=""
+              width="18"
+              height="18"
+            />
+            Continue with Google
+          </button>
+
+          <div className="divider"><span>or {isSignup ? "sign up" : "log in"} with email</span></div>
+
+          <form onSubmit={submit} className="auth-form">
+            {isSignup && (
+              <label className="field">
+                <span className="field-label">Full name</span>
+                <input
+                  type="text"
+                  placeholder="e.g. Olamilekan Yussuf"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  autoComplete="name"
+                />
+              </label>
+            )}
+
+            <label className="field">
+              <span className="field-label">Email</span>
+              <input
+                type="email"
+                placeholder="you@example.com"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                autoComplete="email"
+              />
+            </label>
+
+            <label className="field">
+              <span className="field-label">Password</span>
+              <input
+                type="password"
+                placeholder={isSignup ? "At least 6 characters" : "Your password"}
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                autoComplete={isSignup ? "new-password" : "current-password"}
+              />
+            </label>
+
+            {error && (
+              <div className="alert error-alert">
+                <span>⚠️</span>
+                <span>{error}</span>
+              </div>
+            )}
+
+            <button type="submit" className="primary-btn" disabled={busy}>
+              {busy ? (
+                <>
+                  <span className="btn-spinner" /> Please wait…
+                </>
+              ) : (
+                isSignup ? "Create account" : "Log in"
+              )}
+            </button>
+          </form>
+
+          <p className="switch-mode">
+            {isSignup ? "Already have an account?" : "New to Student Collab?"}{" "}
+            <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                setError("");
+                setMode(isSignup ? "login" : "signup");
+              }}
+            >
+              {isSignup ? "Log in" : "Create one"}
+            </a>
+          </p>
+        </div>
+
+        <p className="auth-foot">
+          By continuing you agree to our <a href="#">Terms</a> and{" "}
+          <a href="#">Privacy Policy</a>.
+        </p>
+      </main>
+    </div>
+  );
+}
+</file>
+
+<file path="client/src/components/Avatar.jsx">
+import { initials, avatarColor } from "../lib/format.js";
+
+export default function Avatar({ name = "", size = 36, seed }) {
+  const label = initials(name);
+  const color = avatarColor(seed || name || "?");
+  return (
+    <div
+      className="avatar"
+      style={{
+        width: size,
+        height: size,
+        background: color,
+        fontSize: Math.round(size * 0.4)
+      }}
+      title={name}
+    >
+      {label}
+    </div>
+  );
+}
+</file>
+
+<file path="client/src/components/BrandPanel.jsx">
+export default function BrandPanel() {
+  return (
+    <aside className="brand-panel">
+      <div className="brand-panel-top">
+        <div className="brand-panel-logo">📚</div>
+        <span className="brand-panel-name">Student Collab</span>
+      </div>
+
+      <div className="brand-panel-body">
+        <h2>Your class, in one place.</h2>
+        <p>
+          Ask questions, share notes, join study groups and revise smarter —
+          together with your classmates.
+        </p>
+        <ul className="brand-panel-list">
+          <li>📖 Subject feeds &amp; discussions</li>
+          <li>📝 Notes, resources &amp; images</li>
+          <li>🤖 AI study assistant</li>
+          <li>🎴 Flashcards &amp; quizzes</li>
+        </ul>
+      </div>
+
+      <div className="brand-panel-footer">
+        Built for students, by students.
+      </div>
+    </aside>
+  );
+}
+</file>
+
+<file path="client/src/components/composer.jsx">
+import { useState } from "react";
+import api from "../lib/api.js";
+
+const TABS = [
+  { id: "message", label: "Message", icon: "💬" },
+  { id: "image",   label: "Image",   icon: "🖼️" },
+  { id: "poll",    label: "Poll",    icon: "📊" },
+  { id: "question",label: "Question",icon: "❓" }
+];
+
+export default function Composer({ user, onPosted }) {
+  const [type, setType] = useState("message");
+  const [text, setText] = useState("");
+  const [title, setTitle] = useState("");
+  const [subject, setSubject] = useState("");
+  const [imageUrl, setImageUrl] = useState("");
+  const [previewOk, setPreviewOk] = useState(null);
+  const [options, setOptions] = useState(["", ""]);
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState("");
+
+  const reset = () => {
+    setText(""); setTitle(""); setSubject("");
+    setImageUrl(""); setPreviewOk(null);
+    setOptions(["", ""]); setError("");
+  };
+
+  const switchType = (id) => {
+    setType(id);
+    setError("");
+  };
+
+  const canSubmit = () => {
+    if (type === "message") return text.trim().length > 0;
+    if (type === "image") return imageUrl.trim().length > 0;
+    if (type === "poll") return text.trim().length > 0 && options.filter(o => o.trim()).length >= 2;
+    if (type === "question") return title.trim().length > 0;
+    return false;
+  };
+
+  const submit = async (e) => {
+    e.preventDefault();
+    if (!canSubmit() || busy) return;
+    setError("");
+    setBusy(true);
+    try {
+      const author = user.displayName || user.email;
+      const authorId = user.uid;
+
+      if (type === "message") {
+        await api.post("/api/posts", {
+          type: "message", author, authorId, text: text.trim()
+        });
+      } else if (type === "image") {
+        await api.post("/api/posts", {
+          type: "image", author, authorId,
+          imageUrl: imageUrl.trim(), text: text.trim()
+        });
+      } else if (type === "poll") {
+        const clean = options.map(o => o.trim()).filter(Boolean);
+        await api.post("/api/posts", {
+          type: "poll", author, authorId,
+          text: text.trim(), options: clean
+        });
+      } else if (type === "question") {
+        await api.post("/api/posts", {
+          type: "question", author, authorId,
+          title: title.trim(), text: text.trim(), subject: subject.trim()
+        });
+      }
+
+      reset();
+      onPosted?.();
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  const updateOption = (i, v) => {
+    const copy = [...options];
+    copy[i] = v;
+    setOptions(copy);
+  };
+
+  const addOption = () => setOptions([...options, ""]);
+
+  const removeOption = (i) => {
+    if (options.length <= 2) return;
+    setOptions(options.filter((_, idx) => idx !== i));
+  };
+
+  return (
+    <form className="composer" onSubmit={submit}>
+      <div className="composer-tabs">
+        {TABS.map((t) => (
+          <button
+            key={t.id}
+            type="button"
+            className={type === t.id ? "composer-tab active" : "composer-tab"}
+            onClick={() => switchType(t.id)}
+          >
+            <span className="tab-icon">{t.icon}</span>
+            <span className="tab-label">{t.label}</span>
+          </button>
+        ))}
+      </div>
+
+      {type === "question" && (
+        <div className="composer-row">
+          <input
+            className="composer-input"
+            placeholder="Question title"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+            maxLength={140}
+          />
+          <input
+            className="composer-input"
+            placeholder="Subject (e.g. Mathematics)"
+            value={subject}
+            onChange={(e) => setSubject(e.target.value)}
+          />
+        </div>
+      )}
+
+      {type === "image" && (
+        <div className="composer-row">
+          <input
+            className="composer-input"
+            placeholder="Image URL (https://...)"
+            value={imageUrl}
+            onChange={(e) => { setImageUrl(e.target.value); setPreviewOk(null); }}
+          />
+          {imageUrl && (
+            <div className="img-preview-wrap">
+              <img
+                src={imageUrl}
+                alt="preview"
+                className="img-preview"
+                onLoad={() => setPreviewOk(true)}
+                onError={() => setPreviewOk(false)}
+              />
+              {previewOk === false && (
+                <p className="warn">⚠️ That URL didn't load as an image. You can still post it.</p>
+              )}
+            </div>
+          )}
+        </div>
+      )}
+
+      <textarea
+        className="composer-textarea"
+        placeholder={
+          type === "message" ? "Share something with your classmates…" :
+          type === "image" ? "Add a caption (optional)…" :
+          type === "poll" ? "Ask your poll question…" :
+          "Add more details (optional)…"
+        }
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+        rows={3}
+      />
+
+      {type === "poll" && (
+        <div className="poll-editor">
+          {options.map((o, i) => (
+            <div className="poll-editor-row" key={i}>
+              <input
+                className="composer-input"
+                placeholder={`Option ${i + 1}`}
+                value={o}
+                onChange={(e) => updateOption(i, e.target.value)}
+              />
+              {options.length > 2 && (
+                <button
+                  type="button"
+                  className="icon-btn"
+                  onClick={() => removeOption(i)}
+                  title="Remove"
+                >
+                  ✕
+                </button>
+              )}
+            </div>
+          ))}
+          {options.length < 6 && (
+            <button type="button" className="ghost-btn" onClick={addOption}>
+              + Add option
+            </button>
+          )}
+        </div>
+      )}
+
+      {error && (
+        <div className="alert error-alert">
+          <span>⚠️</span>
+          <span>{error}</span>
+        </div>
+      )}
+
+      <div className="composer-footer">
+        <span className="composer-hint">
+          Posting as <b>{user.displayName || user.email}</b>
+        </span>
+        <button
+          type="submit"
+          className="primary-btn composer-submit"
+          disabled={!canSubmit() || busy}
+        >
+          {busy ? (
+            <>
+              <span className="btn-spinner" /> Posting…
+            </>
+          ) : (
+            "Post"
+          )}
+        </button>
+      </div>
+    </form>
+  );
+}
+</file>
+
+<file path="client/src/components/ConfirmDialog.jsx">
+export default function ConfirmDialog({
+  open,
+  title,
+  message,
+  confirmLabel = "Confirm",
+  cancelLabel = "Cancel",
+  onConfirm,
+  onCancel,
+  danger = false
+}) {
+  if (!open) return null;
+
+  return (
+    <div className="modal-backdrop" onClick={onCancel}>
+      <div className="modal" onClick={(e) => e.stopPropagation()}>
+        <h3 className="modal-title">{title}</h3>
+        {message && <p className="modal-message">{message}</p>}
+        <div className="modal-actions">
+          <button className="ghost-btn" onClick={onCancel}>
+            {cancelLabel}
+          </button>
+          <button
+            className={danger ? "danger-btn" : "primary-btn"}
+            onClick={onConfirm}
+          >
+            {confirmLabel}
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+</file>
+
+<file path="client/src/components/EmptyState.jsx">
+export default function EmptyState({
+  emoji = "✨",
+  title = "Nothing here yet",
+  message = "",
+  actionLabel,
+  onAction
+}) {
+  return (
+    <div className="empty-state">
+      <div className="empty-emoji">{emoji}</div>
+      <h3>{title}</h3>
+      {message && <p>{message}</p>}
+      {actionLabel && onAction && (
+        <button className="primary-btn" onClick={onAction}>
+          {actionLabel}
+        </button>
+      )}
+    </div>
+  );
+}
+</file>
+
+<file path="client/src/components/LoadingScreen.jsx">
+export default function LoadingScreen({ message = "Loading…" }) {
+  return (
+    <div className="loading-screen">
+      <div className="loading-brand">
+        <div className="loading-mark">📚</div>
+        <h1>Student Collab</h1>
+        <p>Learn together. Grow together.</p>
+      </div>
+      <div className="loading-spinner" aria-label="loading" />
+      <p className="loading-msg">{message}</p>
+    </div>
+  );
+}
+</file>
+
+<file path="client/src/components/PostCard.jsx">
+import { useState } from "react";
+import api from "../lib/api.js";
+import { timeAgo } from "../lib/format.js";
+import Avatar from "./Avatar.jsx";
+
+const TYPE_META = {
+  message:  { label: "Message",  icon: "💬", tone: "neutral" },
+  image:    { label: "Image",    icon: "🖼️", tone: "neutral" },
+  poll:     { label: "Poll",     icon: "📊", tone: "info" },
+  question: { label: "Question", icon: "❓", tone: "warning" }
+};
+
+export default function PostCard({ post, user, onChanged }) {
+  const meta = TYPE_META[post.type] || TYPE_META.message;
+  const authorName = post.author || "Anonymous";
+
+  /* ---------- votes (message / question) ---------- */
+  const voted = (post.votersUp || []).includes(user.uid);
+  const vote = async () => {
+    try {
+      await api.post(`/api/posts/${post.id}/vote`, { uid: user.uid, delta: 1 });
+      onChanged?.();
+    } catch (err) {
+      alert(err.message);
+    }
+  };
+
+  /* ---------- answers (question) ---------- */
+  const [showAnswers, setShowAnswers] = useState(false);
+  const [answerText, setAnswerText] = useState("");
+  const [answerBusy, setAnswerBusy] = useState(false);
+
+  const submitAnswer = async () => {
+    if (!answerText.trim() || answerBusy) return;
+    setAnswerBusy(true);
+    try {
+      await api.post(`/api/posts/${post.id}/answer`, {
+        body: answerText.trim(),
+        author: user.displayName || user.email,
+        authorId: user.uid
+      });
+      setAnswerText("");
+      onChanged?.();
+    } catch (err) {
+      alert(err.message);
+    } finally {
+      setAnswerBusy(false);
+    }
+  };
+
+  /* ---------- poll ---------- */
+  const pollTotal = (post.options || []).reduce((s, o) => s + (o.votes || 0), 0);
+  const hasVoted = (post.voters || []).includes(user.uid);
+  const [pollBusy, setPollBusy] = useState(false);
+
+  const votePoll = async (idx) => {
+    if (hasVoted || pollBusy) return;
+    setPollBusy(true);
+    try {
+      await api.post(`/api/posts/${post.id}/poll-vote`, {
+        uid: user.uid,
+        optionIndex: idx
+      });
+      onChanged?.();
+    } catch (err) {
+      alert(err.message);
+    } finally {
+      setPollBusy(false);
+    }
+  };
+
+  return (
+    <article className={`post-card type-${post.type}`}>
+      {/* HEAD */}
+      <header className="post-head">
+        <Avatar name={authorName} seed={post.authorId || authorName} size={40} />
+        <div className="post-head-meta">
+          <div className="post-author">
+            <span className="post-author-name">{authorName}</span>
+            <span className={`type-badge tone-${meta.tone}`}>
+              <span aria-hidden>{meta.icon}</span> {meta.label}
+            </span>
+          </div>
+          <div className="post-sub">
+            <span>{timeAgo(post.createdAt)}</span>
+            {post.type === "question" && post.subject && (
+              <>
+                <span className="dot">·</span>
+                <span className="subject-tag">{post.subject}</span>
+              </>
+            )}
+          </div>
+        </div>
+      </header>
+
+      {/* BODY */}
+      <div className="post-body">
+        {post.type === "question" && post.title && (
+          <h3 className="post-title">{post.title}</h3>
+        )}
+
+        {post.type === "image" && post.imageUrl && (
+          <div className="post-image">
+            <img
+              src={post.imageUrl}
+              alt=""
+              onError={(e) => { e.currentTarget.style.display = "none"; }}
+            />
+          </div>
+        )}
+
+        {post.text && <p className="post-text">{post.text}</p>}
+      </div>
+
+      {/* POLL */}
+      {post.type === "poll" && (
+        <div className="poll">
+          {(post.options || []).map((o, i) => {
+            const pct = pollTotal ? Math.round((o.votes / pollTotal) * 100) : 0;
+            return (
+              <button
+                key={i}
+                type="button"
+                className={`poll-option${hasVoted ? " voted" : ""}`}
+                disabled={hasVoted || pollBusy}
+                onClick={() => votePoll(i)}
+              >
+                <span className="poll-fill" style={{ width: `${pct}%` }} />
+                <span className="poll-label">
+                  <span className="poll-text">{o.text}</span>
+                  <span className="poll-pct">
+                    {hasVoted ? `${pct}% · ${o.votes}` : ""}
+                  </span>
+                </span>
+              </button>
+            );
+          })}
+          <div className="poll-foot">
+            {pollTotal} vote{pollTotal !== 1 ? "s" : ""}
+            {hasVoted && <span> · You voted</span>}
+          </div>
+        </div>
+      )}
+
+      {/* ACTIONS */}
+      {(post.type === "message" || post.type === "question") && (
+        <div className="post-actions">
+          <button
+            type="button"
+            className={`action-btn${voted ? " voted" : ""}`}
+            onClick={vote}
+          >
+            <span aria-hidden>▲</span>
+            <span>{post.votes || 0}</span>
+            <span className="action-label">{voted ? "Voted" : "Upvote"}</span>
+          </button>
+
+          {post.type === "question" && (
+            <button
+              type="button"
+              className="action-btn"
+              onClick={() => setShowAnswers((s) => !s)}
+            >
+              <span aria-hidden>💬</span>
+              <span>{post.answers?.length || 0}</span>
+              <span className="action-label">
+                {showAnswers ? "Hide answers" : "Answers"}
+              </span>
+            </button>
+          )}
+        </div>
+      )}
+
+      {/* ANSWERS */}
+      {post.type === "question" && showAnswers && (
+        <div className="answers">
+          {(post.answers || []).length === 0 && (
+            <p className="muted">No answers yet. Be the first to help.</p>
+          )}
+          {(post.answers || []).map((a) => (
+            <div className="answer" key={a.id}>
+              <div className="answer-head">
+                <Avatar name={a.author} seed={a.authorId || a.author} size={28} />
+                <div>
+                  <div className="answer-author">{a.author}</div>
+                  <div className="answer-time">{timeAgo(a.createdAt)}</div>
+                </div>
+              </div>
+              <p className="answer-body">{a.body}</p>
+            </div>
+          ))}
+
+          <div className="answer-compose">
+            <textarea
+              placeholder="Write an answer…"
+              value={answerText}
+              onChange={(e) => setAnswerText(e.target.value)}
+              rows={2}
+            />
+            <button
+              type="button"
+              className="primary-btn answer-submit"
+              onClick={submitAnswer}
+              disabled={!answerText.trim() || answerBusy}
+            >
+              {answerBusy ? (
+                <>
+                  <span className="btn-spinner" /> Posting…
+                </>
+              ) : (
+                "Post answer"
+              )}
+            </button>
+          </div>
+        </div>
+      )}
+    </article>
+  );
+}
+</file>
+
+<file path="client/src/components/Skeleton.jsx">
+export default function Skeleton({ width = "100%", height = 14, radius = 6, style }) {
+  return (
+    <div
+      className="skeleton"
+      style={{ width, height, borderRadius: radius, ...style }}
+    />
+  );
+}
+
+export function PostSkeleton() {
+  return (
+    <div className="card post-skel">
+      <div className="post-skel-head">
+        <Skeleton width={40} height={40} radius={999} />
+        <div style={{ flex: 1, display: "flex", flexDirection: "column", gap: 8 }}>
+          <Skeleton width="40%" height={12} />
+          <Skeleton width="25%" height={10} />
+        </div>
+      </div>
+      <div style={{ display: "flex", flexDirection: "column", gap: 8, marginTop: 14 }}>
+        <Skeleton width="100%" height={12} />
+        <Skeleton width="92%" height={12} />
+        <Skeleton width="60%" height={12} />
+      </div>
+    </div>
+  );
+}
+</file>
+
+<file path="client/src/components/Toast.jsx">
+import { useEffect } from "react";
+
+export default function Toast({ message, onClose, duration = 2400 }) {
+  useEffect(() => {
+    if (!message) return;
+    const t = setTimeout(onClose, duration);
+    return () => clearTimeout(t);
+  }, [message, onClose, duration]);
+
+  if (!message) return null;
+
+  return (
+    <div className="toast-wrap">
+      <div className="toast">
+        <span className="toast-dot" />
+        <span>{message}</span>
+      </div>
+    </div>
+  );
+}
+</file>
+
+<file path="client/src/hooks/useconfirm.js">
+import { useState, useCallback } from "react";
+
+export default function useConfirm() {
+  const [state, setState] = useState({ open: false, payload: null });
+
+  const confirm = useCallback((payload) => {
+    return new Promise((resolve) => {
+      setState({ open: true, payload, resolve });
+    });
+  }, []);
+
+  const handle = (result) => {
+    state.resolve?.(result);
+    setState({ open: false, payload: null });
+  };
+
+  return {
+    confirmState: state,
+    askConfirm: confirm,
+    handleConfirm: () => handle(true),
+    handleCancel: () => handle(false)
+  };
+}
+</file>
+
+<file path="client/src/lib/api.js">
+const api = {
+  get: (url) => fetch(url).then((r) => r.json()),
+
+  post: (url, body) =>
+    fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(body)
+    }).then(async (r) => {
+      const data = await r.json().catch(() => ({}));
+      if (!r.ok) throw new Error(data.error || "Request failed");
+      return data;
+    })
+};
+
+export default api;
+</file>
+
+<file path="client/src/lib/firebase.js">
+/* global firebase */
+// Firebase config — same keys as the old app
+const firebaseConfig = {
+  apiKey: "AIzaSyBw8APb1ypdP0W1oAPAjrU8hkdf_d_qcYc",
+  authDomain: "student-collab-25727.firebaseapp.com",
+  projectId: "student-collab-25727",
+  storageBucket: "student-collab-25727.firebasestorage.app",
+  messagingSenderId: "1009326903589",
+  appId: "1:1009326903589:web:a8537638ca222b4dcd0acc"
+};
+
+firebase.initializeApp(firebaseConfig);
+
+export const auth = firebase.auth();
+export const googleProvider = new firebase.auth.GoogleAuthProvider();
+</file>
+
+<file path="client/src/lib/format.js">
+// Relative time: "just now", "2 min ago", "3h ago", "2d ago", else date
+export function timeAgo(ts) {
+  const diff = Date.now() - ts;
+  const s = Math.floor(diff / 1000);
+  if (s < 45) return "just now";
+  const m = Math.floor(s / 60);
+  if (m < 60) return `${m} min ago`;
+  const h = Math.floor(m / 60);
+  if (h < 24) return `${h}h ago`;
+  const d = Math.floor(h / 24);
+  if (d < 7) return `${d}d ago`;
+  return new Date(ts).toLocaleDateString();
+}
+
+// Initials from a display name or email
+export function initials(name = "") {
+  const clean = name.trim();
+  if (!clean) return "?";
+  const parts = clean.split(/\s+/).filter(Boolean);
+  if (parts.length === 1) return parts[0][0].toUpperCase();
+  return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
+}
+
+// Stable color from a string (name/uid) — used for avatar backgrounds
+const AVATAR_COLORS = [
+  "#2563eb", "#7c3aed", "#db2777", "#ea580c",
+  "#0891b2", "#16a34a", "#ca8a04", "#dc2626"
+];
+
+export function avatarColor(seed = "") {
+  let h = 0;
+  for (let i = 0; i < seed.length; i++) h = (h * 31 + seed.charCodeAt(i)) >>> 0;
+  return AVATAR_COLORS[h % AVATAR_COLORS.length];
+}
+</file>
+
+<file path="client/src/pages/Home.jsx">
+import { useState, useEffect } from "react";
+import api from "../lib/api.js";
+import { PostSkeleton } from "../components/Skeleton.jsx";
+import EmptyState from "../components/EmptyState.jsx";
+import Composer from "../components/Composer.jsx";
+import PostCard from "../components/PostCard.jsx";
+
+export default function Home({ user }) {
+  const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+
+  const load = () => {
+    setLoading(true);
+    setError("");
+    api
+      .get("/api/posts")
+      .then((data) => setPosts(data))
+      .catch((err) => setError(err.message))
+      .finally(() => setLoading(false));
+  };
+
+  // silent refresh — used after voting / answering so we don't flash skeletons
+  const refresh = () => {
+    api.get("/api/posts").then(setPosts).catch(() => {});
+  };
+
+  useEffect(() => {
+    load();
+  }, []);
+
+  return (
+    <div className="home">
+      <div className="home-head">
+        <h2>Class feed</h2>
+        <p>Questions, notes, polls and updates from your classmates.</p>
+      </div>
+
+      <Composer user={user} onPosted={refresh} />
+
+      {loading && (
+        <>
+          <PostSkeleton />
+          <PostSkeleton />
+        </>
+      )}
+
+      {!loading && error && (
+        <div className="alert error-alert">
+          <span>⚠️</span>
+          <span>Couldn't load the feed: {error}</span>
+        </div>
+      )}
+
+      {!loading && !error && posts.length === 0 && (
+        <EmptyState
+          emoji="👋"
+          title="Your feed is empty"
+          message="Be the first to share something with your classmates."
+        />
+      )}
+
+      {!loading && !error && posts.length > 0 && (
+        <div className="posts">
+          {posts.map((p) => (
+            <PostCard key={p.id} post={p} user={user} onChanged={refresh} />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+</file>
+
+<file path="client/src/pages/Profile.jsx">
+import { useState, useEffect } from "react";
+import api from "../lib/api.js";
+import { timeAgo } from "../lib/format.js";
+import Avatar from "../components/Avatar.jsx";
+
+const TYPE_META = {
+  message:  { label: "Message",  icon: "💬" },
+  image:    { label: "Image",    icon: "🖼️" },
+  poll:     { label: "Poll",     icon: "📊" },
+  question: { label: "Question", icon: "❓" }
+};
+
+export default function Profile({ user }) {
+  const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    api
+      .get("/api/posts")
+      .then(setPosts)
+      .catch(() => setPosts([]))
+      .finally(() => setLoading(false));
+  }, []);
+
+  const mine = posts.filter((p) => p.authorId === user.uid);
+  const totalUpvotes = mine.reduce((sum, p) => sum + (p.votes || 0), 0);
+  const totalAnswers = mine.reduce(
+    (sum, p) => sum + (p.answers?.length || 0),
+    0
+  );
+
+  const name = user.displayName || "Unnamed";
+  const email = user.email || "";
+  const provider = user.providerData?.[0]?.providerId === "google.com"
+    ? "Google"
+    : "Email";
+
+  return (
+    <div className="profile">
+      {/* HERO */}
+      <div className="profile-hero">
+        <Avatar name={name} seed={user.uid} size={88} />
+        <div className="profile-hero-info">
+          <h1>{name}</h1>
+          <p className="muted">{email}</p>
+          <div className="profile-badges">
+            <span className="chip">🔐 Signed in with {provider}</span>
+            {user.emailVerified && <span className="chip ok">✔ Verified</span>}
+          </div>
+        </div>
+      </div>
+
+      {/* STATS */}
+      <div className="profile-stats">
+        <div className="stat-card">
+          <div className="stat-value">
+            {loading ? "…" : mine.length}
+          </div>
+          <div className="stat-label">Posts</div>
+        </div>
+        <div className="stat-card">
+          <div className="stat-value">
+            {loading ? "…" : totalUpvotes}
+          </div>
+          <div className="stat-label">Upvotes received</div>
+        </div>
+        <div className="stat-card">
+          <div className="stat-value">
+            {loading ? "…" : totalAnswers}
+          </div>
+          <div className="stat-label">Answers received</div>
+        </div>
+      </div>
+
+      {/* ACTIVITY */}
+      <div className="profile-section">
+        <h2>Recent activity</h2>
+
+        {loading && <p className="muted">Loading…</p>}
+
+        {!loading && mine.length === 0 && (
+          <div className="profile-empty">
+            <div className="empty-emoji">📭</div>
+            <h3>No posts yet</h3>
+            <p className="muted">
+              Head over to Home and share your first post.
+            </p>
+          </div>
+        )}
+
+        {!loading && mine.length > 0 && (
+          <ul className="activity-list">
+            {mine.slice(0, 10).map((p) => {
+              const meta = TYPE_META[p.type] || TYPE_META.message;
+              const snippet =
+                p.type === "question"
+                  ? p.title
+                  : p.type === "image"
+                    ? p.text || "Image post"
+                    : p.text;
+              return (
+                <li key={p.id} className="activity-item">
+                  <span className="activity-icon" aria-hidden>
+                    {meta.icon}
+                  </span>
+                  <div className="activity-meta">
+                    <div className="activity-type">{meta.label}</div>
+                    <div className="activity-snippet">
+                      {snippet?.slice(0, 80) || "(no text)"}
+                      {snippet?.length > 80 ? "…" : ""}
+                    </div>
+                  </div>
+                  <div className="activity-time">{timeAgo(p.createdAt)}</div>
+                </li>
+              );
+            })}
+          </ul>
+        )}
+      </div>
+    </div>
+  );
+}
+</file>
+
+<file path="client/src/pages/Tools.jsx">
+const TOOLS = [
+  {
+    id: "notepad",
+    icon: "📝",
+    name: "Notepad",
+    desc: "Quick notes that save on this device.",
+    tone: "blue"
+  },
+  {
+    id: "calc",
+    icon: "🧮",
+    name: "Calculator",
+    desc: "Basic arithmetic, clean and fast.",
+    tone: "green"
+  },
+  {
+    id: "assistant",
+    icon: "🤖",
+    name: "AI Assistant",
+    desc: "Ask any study question and get help.",
+    tone: "purple"
+  },
+  {
+    id: "study",
+    icon: "🎓",
+    name: "Study",
+    desc: "Summarize notes → flashcards → quiz.",
+    tone: "orange"
+  }
+];
+
+export default function Tools({ onOpen }) {
+  return (
+    <div className="tools">
+      <div className="tools-head">
+        <h2>Study tools</h2>
+        <p>Everything you need in one place — notes, AI help, and study practice.</p>
+      </div>
+
+      <div className="tools-grid">
+        {TOOLS.map((t) => (
+          <button
+            key={t.id}
+            className={`tool-card tone-${t.tone}`}
+            onClick={() => onOpen(t.id)}
+          >
+            <span className="tool-icon" aria-hidden>{t.icon}</span>
+            <span className="tool-name">{t.name}</span>
+            <span className="tool-desc">{t.desc}</span>
+            <span className="tool-arrow">→</span>
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
+</file>
+
+<file path="client/src/pages/ToolView.jsx">
+import Notepad from "../tools/Notepad.jsx";
+import Calculator from "../tools/Calculator.jsx";
+import AIAssistant from "../tools/AIAssistant.jsx";
+import Study from "../tools/Study.jsx";
+
+const META = {
+  notepad:   { title: "📝 Notepad" },
+  calc:      { title: "🧮 Calculator" },
+  assistant: { title: "🤖 AI Assistant" },
+  study:     { title: "🎓 Study" }
+};
+
+export default function ToolView({ tool, onBack }) {
+  const meta = META[tool] || { title: "Tool" };
+
+  return (
+    <div className="tool-view">
+      <button className="back-btn" onClick={onBack}>
+        <span aria-hidden>←</span> Back to Tools
+      </button>
+
+      <div className="tool-view-head">
+        <h2>{meta.title}</h2>
+      </div>
+
+      <div className="tool-body">
+        {tool === "notepad" && <Notepad />}
+        {tool === "calc" && <Calculator />}
+        {tool === "assistant" && <AIAssistant />}
+        {tool === "study" && <Study />}
+      </div>
+    </div>
+  );
+}
+</file>
+
+<file path="client/src/tools/AIAssistant.jsx">
+import { useState, useEffect, useRef } from "react";
+import api from "../lib/api.js";
+import ConfirmDialog from "../components/ConfirmDialog.jsx";
+import useConfirm from "../hooks/useConfirm.js";
+
+const SUGGESTIONS = [
+  "Explain photosynthesis in simple terms",
+  "Solve: 2x + 5 = 17",
+  "What is the difference between speed and velocity?",
+  "Give me 3 study tips for exams"
+];
+
+const INITIAL_MESSAGE = {
+  role: "assistant",
+  content:
+    "Hi! I'm your study assistant. Ask me anything about your subjects — Math, English, Biology, Chemistry, Physics and more."
+};
+
+export default function AIAssistant() {
+  const [messages, setMessages] = useState([INITIAL_MESSAGE]);
+  const [input, setInput] = useState("");
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState("");
+  const scrollRef = useRef(null);
+  const textareaRef = useRef(null);
+
+  const { confirmState, askConfirm, handleConfirm, handleCancel } = useConfirm();
+
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (el) el.scrollTop = el.scrollHeight;
+  }, [messages, busy]);
+
+  const send = async (text) => {
+    const content = (text ?? input).trim();
+    if (!content || busy) return;
+
+    setError("");
+    const userMsg = { role: "user", content };
+    const next = [...messages, userMsg];
+    setMessages(next);
+    setInput("");
+    setBusy(true);
+
+    try {
+      const { reply } = await api.post("/api/ai/chat", { messages: next });
+      setMessages([...next, { role: "assistant", content: reply }]);
+    } catch (err) {
+      setError(err.message || "Something went wrong.");
+      setMessages([
+        ...next,
+        {
+          role: "assistant",
+          content:
+            "⚠️ I couldn't reach the AI right now. Please try again in a moment."
+        }
+      ]);
+    } finally {
+      setBusy(false);
+      textareaRef.current?.focus();
+    }
+  };
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    send();
+  };
+
+  const onKeyDown = (e) => {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault();
+      send();
+    }
+  };
+
+  const reset = async () => {
+    const ok = await askConfirm({
+      title: "Start a new chat?",
+      message: "This conversation will be cleared.",
+      confirmLabel: "Clear",
+      danger: true
+    });
+    if (!ok) return;
+
+    setMessages([INITIAL_MESSAGE]);
+    setError("");
+    setInput("");
+  };
+
+  return (
+    <div className="ai-assistant">
+      <div className="ai-chat">
+        <div className="ai-chat-scroll" ref={scrollRef}>
+          {messages.map((m, i) => (
+            <div
+              key={i}
+              className={m.role === "user" ? "ai-row user" : "ai-row ai"}
+            >
+              {m.role === "assistant" && (
+                <div className="ai-avatar" aria-hidden>
+                  🤖
+                </div>
+              )}
+              <div className={`ai-bubble ${m.role}`}>{m.content}</div>
+            </div>
+          ))}
+
+          {busy && (
+            <div className="ai-row ai">
+              <div className="ai-avatar" aria-hidden>
+                🤖
+              </div>
+              <div className="ai-bubble ai typing">
+                <span className="typing-dot" />
+                <span className="typing-dot" />
+                <span className="typing-dot" />
+              </div>
+            </div>
+          )}
+        </div>
+
+        {messages.length === 1 && !busy && (
+          <div className="ai-suggestions">
+            <span className="ai-suggestions-label">Try asking:</span>
+            <div className="ai-suggestion-chips">
+              {SUGGESTIONS.map((s) => (
+                <button
+                  key={s}
+                  className="ai-chip"
+                  onClick={() => send(s)}
+                  type="button"
+                >
+                  {s}
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {error && (
+          <div className="alert error-alert" style={{ margin: "0 12px 8px" }}>
+            <span>⚠️</span>
+            <span>{error}</span>
+          </div>
+        )}
+
+        <form className="ai-composer" onSubmit={onSubmit}>
+          <textarea
+            ref={textareaRef}
+            placeholder="Ask a question… (Shift + Enter for a new line)"
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            onKeyDown={onKeyDown}
+            rows={1}
+            disabled={busy}
+          />
+          <button
+            type="submit"
+            className="primary-btn ai-send"
+            disabled={!input.trim() || busy}
+          >
+            {busy ? <span className="btn-spinner" /> : "Send"}
+          </button>
+        </form>
+      </div>
+
+      <div className="ai-foot">
+        <span className="muted">
+          AI can make mistakes. Double-check important answers.
+        </span>
+        <button className="ghost-btn" onClick={reset} disabled={busy}>
+          New chat
+        </button>
+      </div>
+
+      <ConfirmDialog
+        open={confirmState.open}
+        title={confirmState.payload?.title}
+        message={confirmState.payload?.message}
+        confirmLabel={confirmState.payload?.confirmLabel}
+        danger={confirmState.payload?.danger}
+        onConfirm={handleConfirm}
+        onCancel={handleCancel}
+      />
+    </div>
+  );
+}
+</file>
+
+<file path="client/src/tools/Calculator.jsx">
+import { useState, useEffect, useCallback } from "react";
+
+const MAX_DIGITS = 12;
+
+function formatDisplay(value) {
+  if (value === "Error") return value;
+  if (value === "") return "0";
+  // If it's a decimal with many trailing digits, trim
+  const [intPart, decPart] = value.split(".");
+  const withCommas = intPart.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  return decPart !== undefined ? `${withCommas}.${decPart}` : withCommas;
+}
+
+export default function Calculator() {
+  const [display, setDisplay] = useState("0");
+  const [prev, setPrev] = useState(null); // number string
+  const [op, setOp] = useState(null); // "+" | "-" | "*" | "/"
+  const [justEvaluated, setJustEvaluated] = useState(false);
+  const [history, setHistory] = useState([]); // [{ expression, result }]
+
+  const inputDigit = useCallback((d) => {
+    setDisplay((cur) => {
+      if (cur === "Error") cur = "0";
+      if (justEvaluated) {
+        setJustEvaluated(false);
+        return String(d);
+      }
+      if (cur.replace(/[^0-9]/g, "").length >= MAX_DIGITS) return cur;
+      return cur === "0" ? String(d) : cur + d;
+    });
+  }, [justEvaluated]);
+
+  const inputDot = useCallback(() => {
+    setDisplay((cur) => {
+      if (cur === "Error") cur = "0";
+      if (justEvaluated) {
+        setJustEvaluated(false);
+        return "0.";
+      }
+      return cur.includes(".") ? cur : cur + ".";
+    });
+  }, [justEvaluated]);
+
+  const clearAll = () => {
+    setDisplay("0");
+    setPrev(null);
+    setOp(null);
+    setJustEvaluated(false);
+  };
+
+  const backspace = () => {
+    setDisplay((cur) => {
+      if (cur === "Error" || justEvaluated) return "0";
+      if (cur.length <= 1) return "0";
+      return cur.slice(0, -1);
+    });
+  };
+
+  const toggleSign = () => {
+    setDisplay((cur) => {
+      if (cur === "0" || cur === "Error") return cur;
+      return cur.startsWith("-") ? cur.slice(1) : "-" + cur;
+    });
+  };
+
+  const percent = () => {
+    setDisplay((cur) => {
+      const n = parseFloat(cur);
+      if (isNaN(n)) return cur;
+      return String(n / 100);
+    });
+  };
+
+  const compute = (a, b, operator) => {
+    const x = parseFloat(a);
+    const y = parseFloat(b);
+    if (isNaN(x) || isNaN(y)) return "Error";
+    let r;
+    switch (operator) {
+      case "+": r = x + y; break;
+      case "-": r = x - y; break;
+      case "*": r = x * y; break;
+      case "/": r = y === 0 ? "Error" : x / y; break;
+      default: return String(y);
+    }
+    if (r === "Error") return r;
+    // Round long floats
+    return String(Math.round(r * 1e12) / 1e12);
+  };
+
+  const chooseOp = (nextOp) => {
+    if (op !== null && prev !== null && !justEvaluated) {
+      const result = compute(prev, display, op);
+      setDisplay(result);
+      setPrev(result);
+    } else {
+      setPrev(display);
+    }
+    setOp(nextOp);
+    setJustEvaluated(false);
+    // Wait for next digit to replace display
+    setDisplay((cur) => cur);
+    setJustEvaluated(true);
+  };
+
+  const equals = () => {
+    if (op === null || prev === null) return;
+    const expression = `${prev} ${symbolOf(op)} ${display}`;
+    const result = compute(prev, display, op);
+    setHistory((h) => [{ expression, result }, ...h].slice(0, 6));
+    setDisplay(result);
+    setPrev(null);
+    setOp(null);
+    setJustEvaluated(true);
+  };
+
+  const symbolOf = (o) =>
+    o === "*" ? "×" : o === "/" ? "÷" : o === "-" ? "−" : "+";
+
+  // keyboard support
+  useEffect(() => {
+    const onKey = (e) => {
+      const k = e.key;
+      if (/^[0-9]$/.test(k)) { inputDigit(Number(k)); return; }
+      if (k === "." || k === ",") { inputDot(); return; }
+      if (k === "+" || k === "-" || k === "*" || k === "/") {
+        chooseOp(k);
+        return;
+      }
+      if (k === "Enter" || k === "=") { e.preventDefault(); equals(); return; }
+      if (k === "Backspace") { backspace(); return; }
+      if (k === "Escape" || k.toLowerCase() === "c") { clearAll(); return; }
+      if (k === "%") { percent(); return; }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [inputDigit, inputDot, equals, chooseOp]); // eslint-disable-line
+
+  const KEYS = [
+    { label: "C",    type: "warn", onClick: clearAll },
+    { label: "⌫",    type: "warn", onClick: backspace },
+    { label: "%",    type: "op",   onClick: percent },
+    { label: "÷",    type: "op",   onClick: () => chooseOp("/") },
+
+    { label: "7",    type: "num",  onClick: () => inputDigit(7) },
+    { label: "8",    type: "num",  onClick: () => inputDigit(8) },
+    { label: "9",    type: "num",  onClick: () => inputDigit(9) },
+    { label: "×",    type: "op",   onClick: () => chooseOp("*") },
+
+    { label: "4",    type: "num",  onClick: () => inputDigit(4) },
+    { label: "5",    type: "num",  onClick: () => inputDigit(5) },
+    { label: "6",    type: "num",  onClick: () => inputDigit(6) },
+    { label: "−",    type: "op",   onClick: () => chooseOp("-") },
+
+    { label: "1",    type: "num",  onClick: () => inputDigit(1) },
+    { label: "2",    type: "num",  onClick: () => inputDigit(2) },
+    { label: "3",    type: "num",  onClick: () => inputDigit(3) },
+    { label: "+",    type: "op",   onClick: () => chooseOp("+") },
+
+    { label: "±",    type: "num",  onClick: toggleSign },
+    { label: "0",    type: "num",  onClick: () => inputDigit(0) },
+    { label: ".",    type: "num",  onClick: inputDot },
+    { label: "=",    type: "eq",   onClick: equals }
+  ];
+
+  return (
+    <div className="calc-wrap">
+      <div className="calc">
+        <div className="calc-display">
+          <div className="calc-expression">
+            {prev !== null && op
+              ? `${formatDisplay(prev)} ${symbolOf(op)}`
+              : "\u00A0"}
+          </div>
+          <div className="calc-value">{formatDisplay(display)}</div>
+        </div>
+
+        <div className="calc-keys">
+          {KEYS.map((k) => (
+            <button
+              key={k.label}
+              className={`calc-key ${k.type}`}
+              onClick={k.onClick}
+              type="button"
+            >
+              {k.label}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {history.length > 0 && (
+        <aside className="calc-history">
+          <div className="calc-history-head">
+            <span>History</span>
+            <button className="ghost-btn" onClick={() => setHistory([])}>
+              Clear
+            </button>
+          </div>
+          <ul>
+            {history.map((h, i) => (
+              <li key={i}>
+                <div className="calc-hist-expr">{h.expression}</div>
+                <div className="calc-hist-res">= {formatDisplay(h.result)}</div>
+              </li>
+            ))}
+          </ul>
+        </aside>
+      )}
+
+      <p className="calc-foot muted">
+        Tip: use your keyboard too — numbers, <b>+ − * /</b>, <b>Enter</b> to
+        equals, <b>Backspace</b> to delete, <b>Esc</b> to clear.
+      </p>
+    </div>
+  );
+}
+</file>
+
+<file path="client/src/tools/Notepad.jsx">
+import { useState, useEffect, useRef } from "react";
+import ConfirmDialog from "../components/ConfirmDialog.jsx";
+import useConfirm from "../hooks/useConfirm.js";
+
+const STORAGE_KEY = "sc_notepad";
+
+export default function Notepad() {
+  const [text, setText] = useState(() => localStorage.getItem(STORAGE_KEY) || "");
+  const [saved, setSaved] = useState(true);
+  const [cleared, setCleared] = useState(false);
+  const timerRef = useRef(null);
+  const textareaRef = useRef(null);
+
+  const { confirmState, askConfirm, handleConfirm, handleCancel } = useConfirm();
+
+  useEffect(() => {
+    setSaved(false);
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => {
+      localStorage.setItem(STORAGE_KEY, text);
+      setSaved(true);
+    }, 400);
+    return () => clearTimeout(timerRef.current);
+  }, [text]);
+
+  const wordCount = text.trim() ? text.trim().split(/\s+/).length : 0;
+  const charCount = text.length;
+
+  const clearAll = async () => {
+    if (!text) return;
+    const ok = await askConfirm({
+      title: "Clear the notepad?",
+      message: "This can't be undone.",
+      confirmLabel: "Clear",
+      danger: true
+    });
+    if (!ok) return;
+
+    setText("");
+    localStorage.removeItem(STORAGE_KEY);
+    setCleared(true);
+    setTimeout(() => setCleared(false), 1500);
+    textareaRef.current?.focus();
+  };
+
+  const downloadPdf = () => {
+    if (!text.trim()) return;
+
+    const title = "Notepad";
+    const date = new Date().toLocaleString();
+
+    const escapeHtml = (s) =>
+      s
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;");
+
+    const html = `<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>${title} — ${date}</title>
+  <style>
+    @page { margin: 20mm; }
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      color: #111;
+      line-height: 1.6;
+      font-size: 12pt;
+    }
+    header {
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+    }
+    h1 { margin: 0 0 4px; font-size: 18pt; }
+    .meta { color: #555; font-size: 10pt; }
+    pre {
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      font-family: inherit;
+      font-size: 12pt;
+      margin: 0;
+    }
+    footer {
+      margin-top: 24px;
+      padding-top: 8px;
+      border-top: 1px solid #eee;
+      font-size: 9pt;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>${title}</h1>
+    <div class="meta">Saved ${escapeHtml(date)}</div>
+  </header>
+  <pre>${escapeHtml(text)}</pre>
+  <footer>From Student Collab · Notepad</footer>
+  <script>
+    window.onload = function () {
+      setTimeout(function () { window.print(); }, 200);
+    };
+  <\/script>
+</body>
+</html>`;
+
+    const iframe = document.createElement("iframe");
+    iframe.style.position = "fixed";
+    iframe.style.right = "0";
+    iframe.style.bottom = "0";
+    iframe.style.width = "0";
+    iframe.style.height = "0";
+    iframe.style.border = "0";
+    document.body.appendChild(iframe);
+
+    const doc = iframe.contentWindow.document;
+    doc.open();
+    doc.write(html);
+    doc.close();
+
+    setTimeout(() => {
+      document.body.removeChild(iframe);
+    }, 60000);
+  };
+
+  return (
+    <div className="notepad">
+      <div className="notepad-toolbar">
+        <div className="notepad-status">
+          {saved ? (
+            <span className="save-indicator ok">
+              <span className="dot" /> Saved
+            </span>
+          ) : (
+            <span className="save-indicator pending">
+              <span className="dot" /> Saving…
+            </span>
+          )}
+          {cleared && <span className="save-indicator ok">Cleared</span>}
+        </div>
+
+        <div className="notepad-actions">
+          <span className="counter">
+            {wordCount} word{wordCount !== 1 ? "s" : ""} · {charCount} char
+            {charCount !== 1 ? "s" : ""}
+          </span>
+          <button
+            className="ghost-btn"
+            onClick={downloadPdf}
+            disabled={!text.trim()}
+            title="Save as PDF"
+          >
+            ⬇ Download PDF
+          </button>
+          <button className="ghost-btn" onClick={clearAll} disabled={!text}>
+            Clear
+          </button>
+        </div>
+      </div>
+
+      <textarea
+        ref={textareaRef}
+        className="notepad-area"
+        placeholder="Jot down anything you don't want to forget — formulas, homework, ideas…"
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+        spellCheck={true}
+      />
+
+      <p className="notepad-foot muted">
+        Saved only on this device. Clearing your browser data will erase it.
+        Use <b>Download PDF</b> to keep a permanent copy.
+      </p>
+
+      <ConfirmDialog
+        open={confirmState.open}
+        title={confirmState.payload?.title}
+        message={confirmState.payload?.message}
+        confirmLabel={confirmState.payload?.confirmLabel}
+        danger={confirmState.payload?.danger}
+        onConfirm={handleConfirm}
+        onCancel={handleCancel}
+      />
+    </div>
+  );
+}
+</file>
+
+<file path="client/src/tools/Study.jsx">
+import { useState } from "react";
+import api from "../lib/api.js";
+import ConfirmDialog from "../components/ConfirmDialog.jsx";
+import useConfirm from "../hooks/useConfirm.js";
+
+const STORAGE_KEY = "latestSummary";
+
+export default function Study() {
+  const [text, setText] = useState("");
+  const [summary, setSummary] = useState(
+    () => localStorage.getItem(STORAGE_KEY) || ""
+  );
+  const [cards, setCards] = useState([]);
+  const [cardIdx, setCardIdx] = useState(0);
+  const [flipped, setFlipped] = useState(false);
+  const [quiz, setQuiz] = useState([]);
+  const [quizIdx, setQuizIdx] = useState(0);
+  const [quizChoice, setQuizChoice] = useState(null);
+  const [quizScore, setQuizScore] = useState(0);
+  const [quizDone, setQuizDone] = useState(false);
+
+  const [summaryBusy, setSummaryBusy] = useState(false);
+  const [cardsBusy, setCardsBusy] = useState(false);
+  const [quizBusy, setQuizBusy] = useState(false);
+  const [error, setError] = useState("");
+
+  const [showSummary, setShowSummary] = useState(true);
+  const [showCards, setShowCards] = useState(true);
+
+  const { confirmState, askConfirm, handleConfirm, handleCancel } = useConfirm();
+
+  const generateSummary = async () => {
+    if (text.trim().length < 20) {
+      setError("Paste at least a sentence or two of notes first.");
+      return;
+    }
+    setError("");
+    setSummaryBusy(true);
+    setSummary("");
+    setCards([]);
+    setCardIdx(0);
+    setFlipped(false);
+    setQuiz([]);
+    setQuizIdx(0);
+    setQuizChoice(null);
+    setQuizScore(0);
+    setQuizDone(false);
+    setShowSummary(true);
+    setShowCards(true);
+
+    try {
+      const { summary } = await api.post("/api/ai/summarize", { text });
+      setSummary(summary);
+      localStorage.setItem(STORAGE_KEY, summary);
+      await generateCards(summary);
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setSummaryBusy(false);
+    }
+  };
+
+  const generateCards = async (summaryText) => {
+    const source = summaryText || summary;
+    if (!source) return;
+    setCardsBusy(true);
+    try {
+      const { cards } = await api.post("/api/ai/flashcards", {
+        summary: source
+      });
+      if (!Array.isArray(cards) || !cards.length) {
+        throw new Error("No cards returned");
+      }
+      setCards(cards);
+      setCardIdx(0);
+      setFlipped(false);
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setCardsBusy(false);
+    }
+  };
+
+  const generateQuiz = async () => {
+    if (!summary) return;
+    setQuizBusy(true);
+    setError("");
+    setShowSummary(false);
+    setShowCards(false);
+
+    try {
+      const { questions } = await api.post("/api/ai/quiz", { summary });
+      if (!Array.isArray(questions) || !questions.length) {
+        throw new Error("No questions returned");
+      }
+      setQuiz(questions);
+      setQuizIdx(0);
+      setQuizChoice(null);
+      setQuizScore(0);
+      setQuizDone(false);
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setQuizBusy(false);
+    }
+  };
+
+  const clearAll = async () => {
+    const ok = await askConfirm({
+      title: "Start over?",
+      message: "This will clear the summary, flashcards and quiz.",
+      confirmLabel: "Clear",
+      danger: true
+    });
+    if (!ok) return;
+
+    setText("");
+    setSummary("");
+    setCards([]);
+    setQuiz([]);
+    setQuizChoice(null);
+    setQuizScore(0);
+    setQuizDone(false);
+    setQuizIdx(0);
+    setCardIdx(0);
+    setFlipped(false);
+    setError("");
+    setShowSummary(true);
+    setShowCards(true);
+    localStorage.removeItem(STORAGE_KEY);
+  };
+
+  const chooseAnswer = (i) => {
+    if (quizChoice !== null) return;
+    setQuizChoice(i);
+    if (i === quiz[quizIdx].answerIndex) setQuizScore((s) => s + 1);
+  };
+
+  const nextQuestion = () => {
+    if (quizIdx + 1 >= quiz.length) {
+      setQuizDone(true);
+    } else {
+      setQuizIdx(quizIdx + 1);
+      setQuizChoice(null);
+    }
+  };
+
+  const retakeQuiz = () => {
+    setQuizIdx(0);
+    setQuizChoice(null);
+    setQuizScore(0);
+    setQuizDone(false);
+  };
+
+  const currentCard = cards[cardIdx];
+  const currentQ = quiz[quizIdx];
+
+  return (
+    <div className="study">
+      {!summary && (
+        <section className="study-input">
+          <p className="muted">
+            Paste your notes below. We'll summarize them, then automatically
+            create flashcards and offer a quiz.
+          </p>
+          <textarea
+            className="study-textarea"
+            placeholder="Paste notes here…"
+            value={text}
+            onChange={(e) => setText(e.target.value)}
+            rows={10}
+          />
+          {error && (
+            <div className="alert error-alert">
+              <span>⚠️</span>
+              <span>{error}</span>
+            </div>
+          )}
+          <div className="study-actions">
+            <button
+              className="primary-btn"
+              onClick={generateSummary}
+              disabled={summaryBusy || text.trim().length < 20}
+            >
+              {summaryBusy ? (
+                <>
+                  <span className="btn-spinner" /> Summarizing…
+                </>
+              ) : (
+                "Summarize"
+              )}
+            </button>
+          </div>
+        </section>
+      )}
+
+      {summary && (
+        <>
+          <section className="study-block">
+            <button
+              type="button"
+              className="study-block-head clickable"
+              onClick={() => setShowSummary((s) => !s)}
+            >
+              <h3>
+                <span className="collapse-chevron" aria-hidden>
+                  {showSummary ? "▾" : "▸"}
+                </span>{" "}
+                📌 Summary
+              </h3>
+              <div
+                className="study-block-actions"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <button
+                  className="ghost-btn"
+                  onClick={() => setShowSummary((s) => !s)}
+                >
+                  {showSummary ? "Hide" : "Show"}
+                </button>
+                <button className="ghost-btn" onClick={clearAll}>
+                  Start over
+                </button>
+              </div>
+            </button>
+
+            {showSummary && <pre className="study-summary">{summary}</pre>}
+          </section>
+
+          <section className="study-block">
+            <button
+              type="button"
+              className="study-block-head clickable"
+              onClick={() => setShowCards((s) => !s)}
+            >
+              <h3>
+                <span className="collapse-chevron" aria-hidden>
+                  {showCards ? "▾" : "▸"}
+                </span>{" "}
+                🎴 Flashcards
+                {cards.length > 0 && (
+                  <span
+                    className="muted"
+                    style={{ marginLeft: 8, fontWeight: 400 }}
+                  >
+                    ({cards.length})
+                  </span>
+                )}
+              </h3>
+              <div
+                className="study-block-actions"
+                onClick={(e) => e.stopPropagation()}
+              >
+                {showCards && currentCard && (
+                  <span className="muted" style={{ fontSize: 12 }}>
+                    {cardIdx + 1} / {cards.length}
+                  </span>
+                )}
+                <button
+                  className="ghost-btn"
+                  onClick={() => setShowCards((s) => !s)}
+                >
+                  {showCards ? "Hide" : "Show"}
+                </button>
+                <button
+                  className="ghost-btn"
+                  onClick={() => generateCards()}
+                  disabled={cardsBusy}
+                >
+                  {cardsBusy ? "…" : "Regenerate"}
+                </button>
+              </div>
+            </button>
+
+            {showCards && (
+              <>
+                {cardsBusy && <p className="muted">Generating flashcards…</p>}
+
+                {!cardsBusy && currentCard && (
+                  <>
+                    <div
+                      className={flipped ? "flashcard flipped" : "flashcard"}
+                      onClick={() => setFlipped(!flipped)}
+                      role="button"
+                      tabIndex={0}
+                      onKeyDown={(e) => {
+                        if (e.key === " " || e.key === "Enter") {
+                          e.preventDefault();
+                          setFlipped(!flipped);
+                        }
+                      }}
+                    >
+                      <div className="fc-face fc-front">
+                        <span className="fc-tag">Question</span>
+                        {currentCard.front}
+                      </div>
+                      <div className="fc-face fc-back">
+                        <span className="fc-tag">Answer</span>
+                        {currentCard.back}
+                      </div>
+                    </div>
+
+                    <p className="muted fc-hint">Tap the card to flip</p>
+
+                    <div className="fc-controls">
+                      <button
+                        className="ghost-btn"
+                        onClick={() => {
+                          setCardIdx(Math.max(0, cardIdx - 1));
+                          setFlipped(false);
+                        }}
+                        disabled={cardIdx === 0}
+                      >
+                        ← Prev
+                      </button>
+                      <button
+                        className="ghost-btn"
+                        onClick={() => {
+                          setCardIdx(Math.min(cards.length - 1, cardIdx + 1));
+                          setFlipped(false);
+                        }}
+                        disabled={cardIdx === cards.length - 1}
+                      >
+                        Next →
+                      </button>
+                    </div>
+                  </>
+                )}
+
+                {!cardsBusy && !currentCard && (
+                  <p className="muted">No flashcards yet.</p>
+                )}
+              </>
+            )}
+          </section>
+
+          <section className="study-block">
+            <div className="study-block-head">
+              <h3>❓ Quiz</h3>
+              {quiz.length > 0 && !quizDone && (
+                <span className="muted">
+                  Question {quizIdx + 1} / {quiz.length}
+                </span>
+              )}
+            </div>
+
+            {!quiz.length && !quizBusy && (
+              <>
+                <p className="muted">
+                  Test yourself on the summary. 5 multiple-choice questions.
+                  Summary and flashcards will hide when you start.
+                </p>
+                <button
+                  className="primary-btn"
+                  onClick={generateQuiz}
+                  disabled={quizBusy}
+                >
+                  Generate quiz
+                </button>
+              </>
+            )}
+
+            {quizBusy && <p className="muted">Building quiz…</p>}
+
+            {currentQ && !quizDone && (
+              <>
+                <p className="quiz-q">{currentQ.question}</p>
+                <div className="quiz-options">
+                  {currentQ.options.map((o, i) => {
+                    let cls = "quiz-option";
+                    if (quizChoice !== null) {
+                      if (i === currentQ.answerIndex) cls += " correct";
+                      else if (i === quizChoice) cls += " wrong";
+                    }
+                    return (
+                      <button
+                        key={i}
+                        className={cls}
+                        onClick={() => chooseAnswer(i)}
+                        disabled={quizChoice !== null}
+                        type="button"
+                      >
+                        {o}
+                      </button>
+                    );
+                  })}
+                </div>
+                {quizChoice !== null && (
+                  <div className="quiz-next">
+                    <button className="primary-btn" onClick={nextQuestion}>
+                      {quizIdx + 1 >= quiz.length
+                        ? "See results"
+                        : "Next question →"}
+                    </button>
+                  </div>
+                )}
+              </>
+            )}
+
+            {quizDone && (
+              <div className="quiz-results">
+                <div className="quiz-score">
+                  {quizScore} / {quiz.length}
+                </div>
+                <p className="muted">
+                  {quizScore === quiz.length
+                    ? "Perfect score! 🎉"
+                    : quizScore >= quiz.length / 2
+                      ? "Nice work — review the ones you missed."
+                      : "Keep going — read the summary again and retry."}
+                </p>
+                <div className="quiz-result-actions">
+                  <button className="primary-btn" onClick={retakeQuiz}>
+                    Retake
+                  </button>
+                  <button className="ghost-btn" onClick={generateQuiz}>
+                    New questions
+                  </button>
+                </div>
+              </div>
+            )}
+          </section>
+        </>
+      )}
+
+      {error && summary && (
+        <div className="alert error-alert">
+          <span>⚠️</span>
+          <span>{error}</span>
+        </div>
+      )}
+
+      <ConfirmDialog
+        open={confirmState.open}
+        title={confirmState.payload?.title}
+        message={confirmState.payload?.message}
+        confirmLabel={confirmState.payload?.confirmLabel}
+        danger={confirmState.payload?.danger}
+        onConfirm={handleConfirm}
+        onCancel={handleCancel}
+      />
+    </div>
+  );
+}
+</file>
+
+<file path="client/src/App.jsx">
+import { useState, useEffect } from "react";
+import { auth } from "./lib/firebase.js";
+import AuthScreen from "./components/AuthScreen.jsx";
+import LoadingScreen from "./components/LoadingScreen.jsx";
+import AppHeader from "./components/AppHeader.jsx";
+import AppNav from "./components/AppNav.jsx";
+import Home from "./pages/Home.jsx";
+import Profile from "./pages/Profile.jsx";
+import Tools from "./pages/Tools.jsx";
+import ToolView from "./pages/ToolView.jsx";
+
+function useAuth() {
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    const unsub = auth.onAuthStateChanged((u) => {
+      setUser(u);
+      setLoading(false);
+    });
+    return () => unsub();
+  }, []);
+  return { user, loading };
+}
+
+export default function App() {
+  const { user, loading } = useAuth();
+  const [view, setView] = useState("home");
+  const [activeTool, setActiveTool] = useState(null);
+
+  if (loading) return <LoadingScreen message="Signing you in…" />;
+  if (!user) return <AuthScreen />;
+
+  const openTool = (id) => {
+    setActiveTool(id);
+    setView("tool");
+  };
+
+  const goBackToTools = () => {
+    setActiveTool(null);
+    setView("tools");
+  };
+
+  const handleNav = (v) => {
+    setActiveTool(null);
+    setView(v);
+  };
+
+  const navView = view === "tool" ? "tools" : view;
+
+  return (
+    <div className="app-shell">
+      <AppHeader user={user} />
+      <AppNav view={navView} onNavigate={handleNav} />
+
+      <main className="app-main">
+        {view === "home" && <Home user={user} />}
+        {view === "tools" && <Tools onOpen={openTool} />}
+        {view === "tool" && activeTool && (
+          <ToolView tool={activeTool} onBack={goBackToTools} />
+        )}
+        {view === "profile" && <Profile user={user} />}
+      </main>
+    </div>
+  );
+}
+</file>
+
+<file path="client/src/main.jsx">
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App.jsx";
+import "./styles.css";
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+</file>
+
+<file path="client/src/styles.css">
+* { box-sizing: border-box; }
+
+html, body, #root { height: 100%; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: #f4f6fb;
+  color: #0f172a;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: #2563eb; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* =====================================================
+   LOADING SCREEN
+   ===================================================== */
+.loading-screen {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background:
+    radial-gradient(1200px 600px at 50% -10%, #dbeafe 0%, transparent 60%),
+    #f4f6fb;
+  padding: 24px;
+}
+
+.loading-brand { text-align: center; }
+
+.loading-mark {
+  font-size: 46px;
+  width: 84px;
+  height: 84px;
+  border-radius: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 14px;
+  background: #fff;
+  box-shadow: 0 8px 28px rgba(37, 99, 235, 0.15);
+}
+
+.loading-brand h1 {
+  font-size: 22px;
+  margin: 0 0 4px;
+  letter-spacing: -0.01em;
+}
+
+.loading-brand p {
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.loading-spinner {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 3px solid #dbeafe;
+  border-top-color: #2563eb;
+  animation: spin 0.8s linear infinite;
+}
+
+.loading-msg {
+  margin: 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* =====================================================
+   AUTH SHELL
+   ===================================================== */
+.auth-shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  background: #f4f6fb;
+}
+
+@media (max-width: 900px) {
+  .auth-shell { grid-template-columns: 1fr; }
+  .brand-panel { display: none; }
+}
+
+/* ---------- brand panel (left) ---------- */
+.brand-panel {
+  position: relative;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #fff;
+  background:
+    radial-gradient(900px 500px at -10% 0%, #3b82f6 0%, transparent 55%),
+    radial-gradient(700px 500px at 110% 100%, #8b5cf6 0%, transparent 55%),
+    #0b1220;
+  overflow: hidden;
+}
+
+.brand-panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+
+.brand-panel-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.brand-panel-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.brand-panel-name {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.brand-panel-body {
+  position: relative;
+  z-index: 1;
+  max-width: 420px;
+}
+
+.brand-panel-body h2 {
+  font-size: 34px;
+  line-height: 1.15;
+  margin: 0 0 14px;
+  letter-spacing: -0.02em;
+}
+
+.brand-panel-body p {
+  color: #cbd5e1;
+  margin: 0 0 20px;
+  line-height: 1.55;
+}
+
+.brand-panel-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 14px;
+  color: #e2e8f0;
+}
+
+.brand-panel-footer {
+  position: relative;
+  z-index: 1;
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+/* ---------- auth main (right) ---------- */
+.auth-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 24px;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  background: #fff;
+  padding: 32px;
+  border-radius: 16px;
+  border: 1px solid #e5e7eb;
+  box-shadow:
+    0 1px 2px rgba(15, 23, 42, 0.04),
+    0 12px 32px rgba(15, 23, 42, 0.06);
+}
+
+.auth-card-head { margin-bottom: 20px; }
+
+.auth-card-head h1 {
+  font-size: 24px;
+  margin: 0 0 6px;
+  letter-spacing: -0.02em;
+}
+
+.auth-card-head p {
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.google-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #fff;
+  color: #0f172a;
+  border: 1px solid #d1d5db;
+  font-weight: 500;
+  padding: 11px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: inherit;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.google-btn:hover:not(:disabled) { background: #f8fafc; border-color: #cbd5e1; }
+.google-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+.google-btn img { display: block; }
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #94a3b8;
+  font-size: 12px;
+  margin: 18px 0;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #e5e7eb;
+}
+
+/* ---------- fields ---------- */
+.auth-form { display: flex; flex-direction: column; gap: 14px; }
+
+.field { display: flex; flex-direction: column; gap: 6px; }
+
+.field-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #334155;
+}
+
+.field input {
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  background: #fff;
+  color: #0f172a;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.field input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.field input::placeholder { color: #94a3b8; }
+
+/* ---------- alerts ---------- */
+.alert {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  font-size: 13px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  line-height: 1.4;
+}
+
+.error-alert {
+  background: #fef2f2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+}
+
+/* ---------- primary button ---------- */
+.primary-btn {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 14px;
+  border: 1px solid #2563eb;
+  background: #2563eb;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.15s, transform 0.05s;
+}
+
+.primary-btn:hover:not(:disabled) { background: #1d4ed8; border-color: #1d4ed8; }
+.primary-btn:active:not(:disabled) { transform: translateY(1px); }
+.primary-btn:disabled { opacity: 0.7; cursor: not-allowed; }
+
+.btn-spinner {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.4);
+  border-top-color: #fff;
+  animation: spin 0.7s linear infinite;
+  display: inline-block;
+}
+
+/* ---------- switch mode ---------- */
+.switch-mode {
+  font-size: 13px;
+  color: #475569;
+  margin: 18px 0 0;
+  text-align: center;
+}
+
+.auth-foot {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #94a3b8;
+  text-align: center;
+}
+
+/* =====================================================
+   LOGGED-IN SHELL (temporary until Phase 5)
+   ===================================================== */
+.app { max-width: 960px; margin: 0 auto; padding: 16px; }
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 14px 20px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+header h1 { font-size: 20px; margin: 0; }
+
+header span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #444;
+}
+
+header button {
+  padding: 8px 14px;
+  border: 1px solid #ccc;
+  background: #2563eb;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+/* =====================================================
+   APP SHELL — header, nav, main
+   ===================================================== */
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f4f6fb;
+}
+
+/* ---------- header ---------- */
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: saturate(180%) blur(12px);
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.app-header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.app-logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: #eff6ff;
+  border: 1px solid #dbeafe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.app-name {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  font-size: 15px;
+}
+
+.app-header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-chip {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 12px 4px 4px;
+  border-radius: 999px;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  max-width: 240px;
+}
+
+.user-name {
+  font-size: 13px;
+  font-weight: 500;
+  color: #334155;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.logout-btn {
+  padding: 8px 14px;
+  background: #fff;
+  color: #334155;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.logout-btn:hover { background: #f1f5f9; border-color: #cbd5e1; }
+
+/* ---------- avatar ---------- */
+.avatar {
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  flex-shrink: 0;
+  letter-spacing: 0.02em;
+  user-select: none;
+}
+
+/* ---------- nav ---------- */
+.app-nav {
+  display: flex;
+  gap: 6px;
+  padding: 12px 24px 0;
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.nav-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  color: #475569;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.15s, color 0.15s, border-color 0.15s, transform 0.05s;
+}
+
+.nav-pill:hover { background: #f8fafc; }
+
+.nav-pill.active {
+  background: #2563eb;
+  border-color: #2563eb;
+  color: #fff;
+}
+
+.nav-pill.active:hover { background: #1d4ed8; border-color: #1d4ed8; }
+.nav-pill:active { transform: translateY(1px); }
+
+.nav-icon { font-size: 14px; line-height: 1; }
+
+/* ---------- main ---------- */
+.app-main {
+  flex: 1;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px 24px 40px;
+}
+
+/* ---------- placeholder (temporary) ---------- */
+.placeholder-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 28px;
+  box-shadow: 0 1px 2px rgba(15,23,42,0.04);
+}
+
+.placeholder-card h2 {
+  margin: 0 0 6px;
+  font-size: 20px;
+  letter-spacing: -0.01em;
+}
+
+.placeholder-card p { margin: 0; color: #64748b; }
+
+/* ---------- mobile ---------- */
+@media (max-width: 600px) {
+  .app-header { padding: 10px 14px; }
+  .app-name { display: none; }
+  .user-name { display: none; }
+  .user-chip { padding: 4px; border: none; background: transparent; }
+  .app-nav { padding: 10px 14px 0; gap: 4px; }
+  .nav-pill { padding: 8px 12px; font-size: 13px; }
+  .nav-pill span:not(.nav-icon) { display: none; }
+  .nav-pill .nav-icon { font-size: 16px; }
+  .app-main { padding: 16px 14px 32px; }
+}
+/* =====================================================
+   HOME — page shell
+   ===================================================== */
+.home { display: flex; flex-direction: column; gap: 16px; }
+
+.home-head h2 {
+  margin: 0 0 4px;
+  font-size: 22px;
+  letter-spacing: -0.02em;
+}
+
+.home-head p {
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.composer-slot { margin-top: 4px; }
+
+.placeholder-composer {
+  border: 1px dashed #cbd5e1;
+  background: #f8fafc;
+  text-align: center;
+  padding: 24px;
+}
+
+.muted { color: #64748b; font-size: 13px; }
+
+/* ---------- skeleton shimmer ---------- */
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    #eef2f7 0%,
+    #e2e8f0 50%,
+    #eef2f7 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.4s linear infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.post-skel { padding: 16px; }
+
+.post-skel-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* ---------- empty state ---------- */
+.empty-state {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 48px 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 1px 2px rgba(15,23,42,0.04);
+}
+
+.empty-emoji {
+  font-size: 40px;
+  width: 72px;
+  height: 72px;
+  border-radius: 20px;
+  background: #eff6ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.empty-state h3 {
+  margin: 0;
+  font-size: 17px;
+  letter-spacing: -0.01em;
+}
+
+.empty-state p {
+  margin: 0 0 12px;
+  color: #64748b;
+  font-size: 14px;
+  max-width: 340px;
+}
+
+.empty-state .primary-btn {
+  width: auto;
+  padding: 10px 18px;
+}
+
+/* ---------- posts container ---------- */
+.posts { display: flex; flex-direction: column; gap: 12px; }
+/* =====================================================
+   COMPOSER
+   ===================================================== */
+.composer {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 1px 2px rgba(15,23,42,0.04);
+}
+
+.composer-tabs {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #eef2f7;
+  padding-bottom: 10px;
+}
+
+.composer-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  color: #475569;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.composer-tab:hover { background: #f1f5f9; }
+
+.composer-tab.active {
+  background: #2563eb;
+  color: #fff;
+  border-color: #2563eb;
+}
+
+.tab-icon { font-size: 14px; line-height: 1; }
+
+.composer-row { display: flex; flex-direction: column; gap: 8px; }
+
+.composer-input,
+.composer-textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  background: #fff;
+  color: #0f172a;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.composer-input:focus,
+.composer-textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.composer-textarea {
+  resize: vertical;
+  min-height: 68px;
+  line-height: 1.5;
+}
+
+.img-preview-wrap { margin-top: 4px; }
+
+.img-preview {
+  max-width: 100%;
+  max-height: 260px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  object-fit: cover;
+  display: block;
+}
+
+/* ---------- poll editor ---------- */
+.poll-editor { display: flex; flex-direction: column; gap: 8px; }
+
+.poll-editor-row { display: flex; gap: 8px; align-items: center; }
+
+.icon-btn {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  color: #64748b;
+  font-size: 12px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.icon-btn:hover { background: #fee2e2; color: #991b1b; border-color: #fecaca; }
+
+.ghost-btn {
+  align-self: flex-start;
+  padding: 7px 12px;
+  border-radius: 8px;
+  background: #fff;
+  border: 1px dashed #cbd5e1;
+  color: #334155;
+  font-size: 13px;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.ghost-btn:hover { background: #f8fafc; border-color: #94a3b8; }
+
+/* ---------- footer ---------- */
+.composer-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 4px;
+}
+
+.composer-hint {
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+.composer-hint b { color: #475569; font-weight: 500; }
+
+.composer-submit {
+  width: auto;
+  padding: 10px 22px;
+  min-width: 90px;
+}
+
+@media (max-width: 500px) {
+  .composer-hint { display: none; }
+  .composer-footer { justify-content: flex-end; }
+}
+
+/* =====================================================
+   POST CARD
+   ===================================================== */
+.post-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 1px 2px rgba(15,23,42,0.04);
+  transition: box-shadow 0.15s;
+}
+
+.post-card:hover { box-shadow: 0 4px 16px rgba(15,23,42,0.06); }
+
+/* --- head --- */
+.post-head {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.post-head-meta { flex: 1; min-width: 0; }
+
+.post-author {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.post-author-name {
+  font-weight: 600;
+  font-size: 14px;
+  color: #0f172a;
+}
+
+.type-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  background: #f8fafc;
+  color: #475569;
+}
+
+.type-badge.tone-info    { background: #eff6ff; color: #1d4ed8; border-color: #dbeafe; }
+.type-badge.tone-warning { background: #fff7ed; color: #b45309; border-color: #fed7aa; }
+
+.post-sub {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #64748b;
+  margin-top: 2px;
+}
+
+.post-sub .dot { color: #cbd5e1; }
+
+.subject-tag {
+  display: inline-block;
+  background: #eef2ff;
+  color: #3730a3;
+  padding: 1px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+/* --- body --- */
+.post-body { display: flex; flex-direction: column; gap: 10px; }
+
+.post-title {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: #0f172a;
+}
+
+.post-text {
+  margin: 0;
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: #1e293b;
+  white-space: pre-wrap;
+}
+
+.post-image {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #eef2f7;
+  background: #f8fafc;
+  max-height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.post-image img {
+  width: 100%;
+  height: auto;
+  max-height: 480px;
+  object-fit: cover;
+  display: block;
+}
+
+/* --- actions --- */
+.post-actions {
+  display: flex;
+  gap: 6px;
+  padding-top: 10px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  color: #475569;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.action-btn:hover { background: #f1f5f9; }
+
+.action-btn.voted {
+  background: #2563eb;
+  border-color: #2563eb;
+  color: #fff;
+}
+
+.action-label { color: inherit; }
+
+@media (max-width: 480px) {
+  .action-label { display: none; }
+}
+
+/* --- answers --- */
+.answers {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 12px;
+  border-top: 1px dashed #e2e8f0;
+}
+
+.answer {
+  background: #f8fafc;
+  border: 1px solid #f1f5f9;
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+.answer-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.answer-author {
+  font-size: 13px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.answer-time { font-size: 11px; color: #94a3b8; }
+
+.answer-body {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #1e293b;
+  white-space: pre-wrap;
+}
+
+.answer-compose {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.answer-compose textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  resize: vertical;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.answer-compose textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.answer-submit {
+  align-self: flex-end;
+  width: auto;
+  padding: 8px 18px;
+}
+
+/* --- poll --- */
+.poll {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.poll-option {
+  position: relative;
+  text-align: left;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  color: #0f172a;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: inherit;
+  overflow: hidden;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.poll-option:hover:not(:disabled) { border-color: #cbd5e1; background: #f1f5f9; }
+.poll-option:disabled { cursor: default; }
+
+.poll-fill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  background: linear-gradient(90deg, #dbeafe, #bfdbfe);
+  transition: width 0.35s ease;
+  z-index: 0;
+}
+
+.poll-option.voted .poll-fill {
+  background: linear-gradient(90deg, #dbeafe, #93c5fd);
+}
+
+.poll-label {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.poll-text { flex: 1; }
+
+.poll-pct { font-size: 12px; color: #1e40af; font-weight: 600; }
+
+.poll-foot {
+  font-size: 12px;
+  color: #64748b;
+  padding-top: 2px;
+}
+/* =====================================================
+   PROFILE
+   ===================================================== */
+.profile { display: flex; flex-direction: column; gap: 20px; }
+
+/* hero */
+.profile-hero {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 1px 2px rgba(15,23,42,0.04);
+  position: relative;
+  overflow: hidden;
+}
+
+.profile-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, #eff6ff 0%, transparent 55%);
+  pointer-events: none;
+}
+
+.profile-hero > * { position: relative; }
+
+.profile-hero-info { min-width: 0; }
+
+.profile-hero-info h1 {
+  margin: 0 0 4px;
+  font-size: 22px;
+  letter-spacing: -0.02em;
+}
+
+.profile-hero-info .muted {
+  margin: 0 0 10px;
+  font-size: 13px;
+}
+
+.profile-badges { display: flex; flex-wrap: wrap; gap: 6px; }
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  background: #f1f5f9;
+  color: #334155;
+  border: 1px solid #e2e8f0;
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+
+.chip.ok { background: #ecfdf5; color: #065f46; border-color: #a7f3d0; }
+
+@media (max-width: 480px) {
+  .profile-hero { flex-direction: column; text-align: center; padding: 20px; }
+}
+
+/* stats */
+.profile-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.stat-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 1px 2px rgba(15,23,42,0.04);
+}
+
+.stat-value {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: #0f172a;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: #64748b;
+  margin-top: 4px;
+}
+
+@media (max-width: 480px) {
+  .profile-stats { grid-template-columns: 1fr 1fr 1fr; }
+  .stat-value { font-size: 20px; }
+  .stat-label { font-size: 11px; }
+}
+
+/* section */
+.profile-section { display: flex; flex-direction: column; gap: 12px; }
+
+.profile-section h2 {
+  margin: 0;
+  font-size: 17px;
+  letter-spacing: -0.01em;
+}
+
+.profile-empty {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 32px 20px;
+  text-align: center;
+}
+
+.profile-empty h3 {
+  margin: 8px 0 4px;
+  font-size: 15px;
+}
+
+/* activity list */
+.activity-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(15,23,42,0.04);
+}
+
+.activity-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.activity-item:last-child { border-bottom: none; }
+
+.activity-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: #eff6ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.activity-meta { flex: 1; min-width: 0; }
+
+.activity-type {
+  font-size: 11px;
+  font-weight: 600;
+  color: #2563eb;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.activity-snippet {
+  font-size: 13.5px;
+  color: #1e293b;
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.activity-time {
+  font-size: 12px;
+  color: #94a3b8;
+  flex-shrink: 0;
+}
+
+@media (max-width: 480px) {
+  .activity-time { display: none; }
+}
+
+/* =====================================================
+   TOOLS
+   ===================================================== */
+.tools { display: flex; flex-direction: column; gap: 20px; }
+
+.tools-head h2 {
+  margin: 0 0 4px;
+  font-size: 22px;
+  letter-spacing: -0.02em;
+}
+
+.tools-head p {
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 14px;
+}
+
+.tool-card {
+  position: relative;
+  text-align: left;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  color: #0f172a;
+  box-shadow: 0 1px 2px rgba(15,23,42,0.04);
+  transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+  overflow: hidden;
+}
+
+.tool-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(15,23,42,0.08);
+  border-color: #cbd5e1;
+}
+
+.tool-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  background: #eff6ff;
+  margin-bottom: 8px;
+}
+
+.tool-name {
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: -0.01em;
+}
+
+.tool-desc {
+  font-size: 13px;
+  color: #64748b;
+  line-height: 1.4;
+}
+
+.tool-arrow {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 16px;
+  color: #cbd5e1;
+  transition: transform 0.15s, color 0.15s;
+}
+
+.tool-card:hover .tool-arrow {
+  color: #2563eb;
+  transform: translateX(3px);
+}
+
+/* per-tool tones */
+.tool-card.tone-blue   .tool-icon { background: #eff6ff; }
+.tool-card.tone-green  .tool-icon { background: #ecfdf5; }
+.tool-card.tone-purple .tool-icon { background: #f5f3ff; }
+.tool-card.tone-orange .tool-icon { background: #fff7ed; }
+.tool-card.tone-pink   .tool-icon { background: #fdf2f8; }
+.tool-card.tone-red    .tool-icon { background: #fef2f2; }
+
+/* =====================================================
+   TOOL VIEW
+   ===================================================== */
+.tool-view { display: flex; flex-direction: column; gap: 12px; }
+
+.back-btn {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  color: #475569;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.back-btn:hover { background: #f8fafc; border-color: #cbd5e1; }
+
+.tool-view-head h2 {
+  margin: 4px 0 8px;
+  font-size: 22px;
+  letter-spacing: -0.02em;
+}
+
+.tool-body {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 28px;
+  box-shadow: 0 1px 2px rgba(15,23,42,0.04);
+}
+
+@media (max-width: 500px) {
+  .tools-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .tool-card { padding: 16px; }
+  .tool-icon { width: 40px; height: 40px; font-size: 20px; }
+  .tool-name { font-size: 14px; }
+  .tool-desc { font-size: 12px; }
+  .tool-arrow { top: 16px; right: 16px; }
+}
+
+/* =====================================================
+   NOTEPAD
+   ===================================================== */
+.notepad { display: flex; flex-direction: column; gap: 12px; }
+
+.notepad-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.notepad-status { display: flex; align-items: center; gap: 12px; }
+
+.save-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #f1f5f9;
+  color: #475569;
+  border: 1px solid #e2e8f0;
+  transition: background 0.2s, color 0.2s;
+}
+
+.save-indicator .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.save-indicator.ok {
+  background: #ecfdf5;
+  color: #047857;
+  border-color: #a7f3d0;
+}
+
+.save-indicator.pending {
+  background: #fff7ed;
+  color: #b45309;
+  border-color: #fed7aa;
+}
+
+.notepad-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.counter {
+  font-size: 12px;
+  color: #94a3b8;
+  font-variant-numeric: tabular-nums;
+}
+
+.notepad-area {
+  width: 100%;
+  min-height: 420px;
+  padding: 18px 20px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: #fbfdff;
+  font-size: 15px;
+  line-height: 1.65;
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  color: #0f172a;
+  resize: vertical;
+  transition: border-color 0.15s, box-shadow 0.15s, background 0.15s;
+}
+
+.notepad-area:focus {
+  outline: none;
+  border-color: #2563eb;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.notepad-area::placeholder { color: #94a3b8; }
+
+.notepad-foot {
+  margin: 0;
+  font-size: 12px;
+}
+
+@media (max-width: 500px) {
+  .notepad-toolbar { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .notepad-area { min-height: 320px; padding: 14px; font-size: 14px; }
+}
+
+/* =====================================================
+   CALCULATOR
+   ===================================================== */
+.calc-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 720px;
+}
+
+.calc {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 1px 2px rgba(15,23,42,0.04);
+}
+
+.calc-display {
+  background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+  color: #f8fafc;
+  border-radius: 12px;
+  padding: 18px 20px;
+  min-height: 100px;
+  margin-bottom: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.calc-expression {
+  font-size: 13px;
+  color: #94a3b8;
+  font-variant-numeric: tabular-nums;
+  min-height: 18px;
+  letter-spacing: 0.02em;
+}
+
+.calc-value {
+  font-size: 38px;
+  font-weight: 500;
+  text-align: right;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+  overflow-x: auto;
+  white-space: nowrap;
+  line-height: 1.1;
+}
+
+@media (max-width: 420px) {
+  .calc-value { font-size: 30px; }
+}
+
+/* grid */
+.calc-keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.calc-key {
+  padding: 18px 0;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: inherit;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: transform 0.05s, background 0.12s, box-shadow 0.12s;
+  user-select: none;
+}
+
+.calc-key:active { transform: scale(0.97); }
+
+.calc-key.num {
+  background: #f8fafc;
+  color: #0f172a;
+  border-color: #e5e7eb;
+}
+.calc-key.num:hover { background: #f1f5f9; }
+
+.calc-key.op {
+  background: #eff6ff;
+  color: #1d4ed8;
+  border-color: #dbeafe;
+  font-size: 20px;
+}
+.calc-key.op:hover { background: #dbeafe; }
+
+.calc-key.warn {
+  background: #fef2f2;
+  color: #b91c1c;
+  border-color: #fecaca;
+}
+.calc-key.warn:hover { background: #fee2e2; }
+
+.calc-key.eq {
+  background: #2563eb;
+  color: #fff;
+  border-color: #2563eb;
+  grid-column: span 1;
+  font-size: 20px;
+}
+.calc-key.eq:hover { background: #1d4ed8; }
+
+/* history */
+.calc-history {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 14px 16px;
+  box-shadow: 0 1px 2px rgba(15,23,42,0.04);
+}
+
+.calc-history-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #94a3b8;
+  font-weight: 600;
+}
+
+.calc-history ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.calc-history li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 10px;
+  background: #f8fafc;
+  border-radius: 8px;
+  font-variant-numeric: tabular-nums;
+}
+
+.calc-hist-expr {
+  font-size: 13px;
+  color: #64748b;
+}
+
+.calc-hist-res {
+  font-size: 13px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.calc-foot { margin: 0; font-size: 12px; line-height: 1.5; }
+.calc-foot b { color: #334155; font-weight: 600; }
+
+/* =====================================================
+   AI ASSISTANT
+   ===================================================== */
+.ai-assistant { display: flex; flex-direction: column; gap: 10px; }
+
+.ai-chat {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(15,23,42,0.04);
+}
+
+.ai-chat-scroll {
+  flex: 1;
+  overflow-y: auto;
+  padding: 18px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-height: 380px;
+  max-height: 520px;
+  background:
+    radial-gradient(600px 300px at 100% 0%, #eff6ff 0%, transparent 60%),
+    #fff;
+}
+
+.ai-row {
+  display: flex;
+  gap: 10px;
+  align-items: flex-end;
+}
+
+.ai-row.user { flex-direction: row-reverse; }
+
+.ai-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #eff6ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  flex-shrink: 0;
+  border: 1px solid #dbeafe;
+}
+
+.ai-bubble {
+  max-width: 78%;
+  padding: 11px 14px;
+  border-radius: 14px;
+  font-size: 14.5px;
+  line-height: 1.55;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.ai-bubble.ai {
+  background: #f8fafc;
+  border: 1px solid #eef2f7;
+  color: #1e293b;
+  border-bottom-left-radius: 4px;
+}
+
+.ai-bubble.user {
+  background: #2563eb;
+  color: #fff;
+  border-bottom-right-radius: 4px;
+}
+
+/* typing indicator */
+.ai-bubble.typing {
+  display: inline-flex;
+  gap: 5px;
+  padding: 14px 16px;
+}
+
+.typing-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #94a3b8;
+  animation: typing 1.2s infinite ease-in-out;
+}
+
+.typing-dot:nth-child(2) { animation-delay: 0.15s; }
+.typing-dot:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes typing {
+  0%, 60%, 100% { opacity: 0.3; transform: translateY(0); }
+  30% { opacity: 1; transform: translateY(-3px); }
+}
+
+/* suggestions */
+.ai-suggestions {
+  padding: 10px 14px 12px;
+  border-top: 1px solid #f1f5f9;
+  background: #fff;
+}
+
+.ai-suggestions-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #94a3b8;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.ai-suggestion-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.ai-chip {
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  color: #334155;
+  border-radius: 999px;
+  padding: 7px 12px;
+  font-size: 12.5px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.15s, border-color 0.15s;
+  text-align: left;
+}
+
+.ai-chip:hover { background: #eff6ff; border-color: #bfdbfe; color: #1d4ed8; }
+
+/* composer */
+.ai-composer {
+  display: flex;
+  gap: 8px;
+  padding: 12px;
+  border-top: 1px solid #f1f5f9;
+  background: #fff;
+  align-items: flex-end;
+}
+
+.ai-composer textarea {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: inherit;
+  resize: none;
+  min-height: 42px;
+  max-height: 120px;
+  line-height: 1.45;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.ai-composer textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.ai-send {
+  width: auto;
+  padding: 10px 20px;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+/* foot */
+.ai-foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.ai-foot .muted { font-size: 12px; }
+
+@media (max-width: 500px) {
+  .ai-chat-scroll { min-height: 320px; max-height: 60vh; padding: 14px 12px; }
+  .ai-bubble { max-width: 88%; font-size: 14px; }
+  .ai-foot { flex-direction: column; align-items: flex-start; gap: 6px; }
+}
+
+/* =====================================================
+   STUDY (Summary + Flashcards + Quiz)
+   ===================================================== */
+.study { display: flex; flex-direction: column; gap: 16px; }
+
+.study-input { display: flex; flex-direction: column; gap: 12px; }
+
+.study-textarea {
+  width: 100%;
+  min-height: 200px;
+  padding: 14px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 14.5px;
+  line-height: 1.55;
+  font-family: inherit;
+  resize: vertical;
+  background: #fbfdff;
+  transition: border-color 0.15s, box-shadow 0.15s, background 0.15s;
+}
+
+.study-textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.study-actions { display: flex; justify-content: flex-end; }
+.study-actions .primary-btn { width: auto; padding: 10px 22px; }
+
+/* ---------- blocks ---------- */
+.study-block {
+  background: #fbfdff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.study-block-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.study-block-head h3 {
+  margin: 0;
+  font-size: 15px;
+  letter-spacing: -0.01em;
+}
+
+.study-block-actions { display: flex; gap: 6px; flex-wrap: wrap; }
+
+.study-summary {
+  margin: 0;
+  white-space: pre-wrap;
+  font-family: inherit;
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: #1e293b;
+  background: #fff;
+  border: 1px solid #eef2f7;
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+
+/* ---------- flashcards (reuse existing .flashcard from old styles) ---------- */
+.flashcard {
+  position: relative;
+  height: 220px;
+  perspective: 1000px;
+  cursor: pointer;
+  outline: none;
+}
+
+.flashcard:focus-visible {
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.35);
+  border-radius: 12px;
+}
+
+.fc-face {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  border-radius: 12px;
+  backface-visibility: hidden;
+  transition: transform 0.5s;
+  text-align: center;
+  font-size: 17px;
+  line-height: 1.45;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(15,23,42,0.05);
+}
+
+.fc-tag {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  color: #94a3b8;
+  margin-bottom: 10px;
+}
+
+.fc-back {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: #fff;
+  border-color: #1d4ed8;
+  transform: rotateY(180deg);
+}
+
+.fc-back .fc-tag { color: #c7d2fe; }
+
+.flashcard.flipped .fc-front { transform: rotateY(180deg); }
+.flashcard.flipped .fc-back { transform: rotateY(0); }
+
+.fc-hint { text-align: center; font-size: 12px; margin: 0; }
+
+.fc-controls {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+/* ---------- quiz ---------- */
+.quiz-q {
+  margin: 0;
+  font-size: 15.5px;
+  font-weight: 600;
+  color: #0f172a;
+  line-height: 1.45;
+}
+
+.quiz-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.quiz-option {
+  text-align: left;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  color: #0f172a;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.quiz-option:hover:not(:disabled) {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+.quiz-option:disabled { cursor: default; }
+
+.quiz-option.correct {
+  background: #ecfdf5;
+  border-color: #6ee7b7;
+  color: #065f46;
+}
+
+.quiz-option.wrong {
+  background: #fef2f2;
+  border-color: #fecaca;
+  color: #991b1b;
+}
+
+.quiz-next { display: flex; justify-content: flex-end; }
+
+.quiz-results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 16px;
+  background: #fff;
+  border: 1px solid #eef2f7;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.quiz-score {
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #2563eb;
+}
+
+.quiz-result-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (max-width: 500px) {
+  .flashcard { height: 200px; }
+  .fc-face { padding: 18px; font-size: 15.5px; }
+  .study-block-head { flex-direction: column; align-items: flex-start; }
+}
+
+/* clickable block header with chevron */
+.study-block-head.clickable {
+  cursor: pointer;
+  user-select: none;
+  border: none;
+  background: transparent;
+  padding: 0;
+  width: 100%;
+  text-align: left;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.study-block-head.clickable:hover h3 { color: #2563eb; }
+
+.study-block-head h3 {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.15s;
+}
+
+.collapse-chevron {
+  display: inline-block;
+  width: 14px;
+  font-size: 11px;
+  color: #94a3b8;
+}
+
+/* =====================================================
+   MODAL / CONFIRM DIALOG
+   ===================================================== */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.45);
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 20px;
+  animation: fadeIn 0.15s ease;
+}
+
+.modal {
+  background: #fff;
+  border-radius: 14px;
+  padding: 22px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.25);
+  animation: popIn 0.18s cubic-bezier(0.2, 0.9, 0.3, 1.2);
+}
+
+.modal-title {
+  margin: 0 0 6px;
+  font-size: 17px;
+  letter-spacing: -0.01em;
+}
+
+.modal-message {
+  margin: 0 0 18px;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.danger-btn {
+  padding: 9px 18px;
+  background: #dc2626;
+  color: #fff;
+  border: 1px solid #dc2626;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.danger-btn:hover { background: #b91c1c; border-color: #b91c1c; }
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* =====================================================
+   TOAST
+   ===================================================== */
+.toast-wrap {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 200;
+  animation: toastIn 0.25s cubic-bezier(0.2, 0.9, 0.3, 1.2);
+}
+
+.toast {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 18px;
+  background: #0f172a;
+  color: #f8fafc;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.3);
+}
+
+.toast-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22c55e;
+}
+
+@keyframes toastIn {
+  from { opacity: 0; transform: translate(-50%, 12px); }
+  to { opacity: 1; transform: translate(-50%, 0); }
+}
+</file>
+
+<file path="client/.gitignore">
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+</file>
+
+<file path="client/eslint.config.js">
+import js from '@eslint/js'
+import globals from 'globals'
+import reactHooks from 'eslint-plugin-react-hooks'
+import reactRefresh from 'eslint-plugin-react-refresh'
+import { defineConfig, globalIgnores } from 'eslint/config'
+
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{js,jsx}'],
+    extends: [
+      js.configs.recommended,
+      reactHooks.configs.flat.recommended,
+      reactRefresh.configs.vite,
+    ],
+    languageOptions: {
+      globals: globals.browser,
+      parserOptions: { ecmaFeatures: { jsx: true } },
+    },
+  },
+])
+</file>
+
+<file path="client/index.html">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#2563eb" />
+    <meta name="description" content="A study community for secondary school students — ask questions, share notes, learn together." />
+    <title>Student Collab</title>
+
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
+</file>
+
+<file path="client/package.json">
+{
+  "name": "client",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@vitejs/plugin-react": "^6.1.1",
+    "eslint": "^10.10.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.6",
+    "globals": "^17.12.0",
+    "vite": "^8.3.0"
+  }
+}
+</file>
+
+<file path="client/README.md">
+# React + Vite
+
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+
+## React Compiler
+
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+</file>
+
+<file path="client/vite.config.js">
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+
+export default defineConfig({
+  plugins: [react()],
+  server: {
+    port: 5173,
+    proxy: {
+      "/api": {
+        target: "http://localhost:3000",
+        changeOrigin: true
+      }
+    }
+  }
+});
+</file>
+
+<file path="server/db.json">
+{
+  "users": [],
+  "posts": [
+    {
+      "id": "1791008240697",
+      "type": "message",
+      "author": "Olamilekan",
+      "authorId": "OcBFcwZfAbSsmLEYX7fH1YO9Upu2",
+      "text": "hey",
+      "title": "",
+      "subject": "",
+      "imageUrl": "",
+      "options": [],
+      "voters": [],
+      "votes": 1,
+      "votersUp": [
+        "OcBFcwZfAbSsmLEYX7fH1YO9Upu2"
+      ],
+      "answers": [],
+      "createdAt": 1791008240697
+    },
+    {
+      "id": "1791008525436",
+      "type": "poll",
+      "author": "Olamilekan",
+      "authorId": "OcBFcwZfAbSsmLEYX7fH1YO9Upu2",
+      "text": "math or english",
+      "title": "",
+      "subject": "",
+      "imageUrl": "",
+      "options": [
+        {
+          "text": "math",
+          "votes": 1
+        },
+        {
+          "text": "english",
+          "votes": 0
+        }
+      ],
+      "voters": [
+        "OcBFcwZfAbSsmLEYX7fH1YO9Upu2"
+      ],
+      "votes": 0,
+      "votersUp": [],
+      "answers": [],
+      "createdAt": 1791008525436
+    }
+  ]
+}
+</file>
+
+<file path="server/package.json">
+{
+  "name": "student-collab",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js"
+  },
+  "dependencies": {
+  "express": "^4.19.2",
+  "dotenv": "^16.4.5",
+  "multer": "^1.4.5-lts.1"
+}
+}
+</file>
+
+<file path="server/server.js">
+require("dotenv").config();
+const express = require("express");
+const fs = require("fs");
+const path = require("path");
+
+const app = express();
+const PORT = 3000;
+const DB = path.join(__dirname, "db.json");
+const GEMINI_KEY = process.env.GEMINI_API_KEY;
+
+// Evergreen model names — Google keeps these pointing at the latest stable version
+const GEMINI_MODELS = [
+  "gemini-flash-latest",
+  "gemini-flash-lite-latest"
+];
+
+app.use(express.json({ limit: "2mb" }));
+app.use(express.static(path.join(__dirname, "public")));
+
+/* ---------- tiny JSON db ---------- */
+const read = () => JSON.parse(fs.readFileSync(DB, "utf8"));
+const write = (data) => fs.writeFileSync(DB, JSON.stringify(data, null, 2));
+
+/* ---------- Gemini helper with automatic fallback ---------- */
+async function askGemini(prompt) {
+  if (!GEMINI_KEY) throw new Error("GEMINI_API_KEY missing on server");
+
+  let lastError = "Unknown error";
+
+  for (const model of GEMINI_MODELS) {
+    try {
+      const url =
+        `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${GEMINI_KEY}`;
+
+      const res = await fetch(url, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          contents: [{ parts: [{ text: prompt }] }]
+        })
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        lastError = data?.error?.message || `${model} failed`;
+        continue; // try next model
+      }
+
+      const text = data?.candidates?.[0]?.content?.parts?.[0]?.text;
+      if (!text) {
+        lastError = `Empty response from ${model}`;
+        continue;
+      }
+
+      return text.trim();
+    } catch (err) {
+      lastError = err.message;
+    }
+  }
+
+  throw new Error(lastError);
+}
+
+/* =====================================================
+   FEED — /api/posts
+   Post shape:
+   {
+     id, type: "message" | "image" | "poll" | "question",
+     author, authorId,
+     text,           // message / question body / poll question / image caption
+     title,          // question only
+     subject,        // question only
+     imageUrl,       // image only
+     options: [],    // poll only -> [{ text, votes }]
+     voters: [],     // poll only -> [uid, ...]
+     votes,          // question/message upvotes
+     votersUp: [],   // who upvoted (question/message)
+     answers: [],    // question only
+     createdAt
+   }
+   ===================================================== */
+
+app.get("/api/posts", (req, res) => {
+  const db = read();
+  const posts = (db.posts || []).slice().sort((a, b) => b.createdAt - a.createdAt);
+  res.json(posts);
+});
+
+app.post("/api/posts", (req, res) => {
+  const db = read();
+  if (!db.posts) db.posts = [];
+
+  const {
+    type, author, authorId,
+    text, title, subject, imageUrl, options
+  } = req.body;
+
+  if (!type || !author) {
+    return res.status(400).json({ error: "type and author required" });
+  }
+
+  const post = {
+    id: Date.now().toString(),
+    type,
+    author,
+    authorId: authorId || null,
+    text: text || "",
+    title: title || "",
+    subject: subject || "",
+    imageUrl: imageUrl || "",
+    options: Array.isArray(options)
+      ? options.map((o) => ({ text: o, votes: 0 }))
+      : [],
+    voters: [],
+    votes: 0,
+    votersUp: [],
+    answers: [],
+    createdAt: Date.now()
+  };
+
+  db.posts.push(post);
+  write(db);
+  res.json(post);
+});
+
+/* upvote / downvote a message or question */
+app.post("/api/posts/:id/vote", (req, res) => {
+  const db = read();
+  const p = (db.posts || []).find((x) => x.id === req.params.id);
+  if (!p) return res.status(404).json({ error: "Not found" });
+
+  const { uid, delta } = req.body;
+  const deltaNum = delta === -1 ? -1 : 1;
+
+  if (deltaNum === 1 && uid) {
+    if (p.votersUp.includes(uid)) {
+      p.votersUp = p.votersUp.filter((x) => x !== uid);
+      p.votes -= 1;
+    } else {
+      p.votersUp.push(uid);
+      p.votes += 1;
+    }
+  } else {
+    p.votes += deltaNum;
+  }
+
+  write(db);
+  res.json(p);
+});
+
+/* answer a question */
+app.post("/api/posts/:id/answer", (req, res) => {
+  const db = read();
+  const p = (db.posts || []).find((x) => x.id === req.params.id);
+  if (!p) return res.status(404).json({ error: "Not found" });
+  if (p.type !== "question") {
+    return res.status(400).json({ error: "Not a question post" });
+  }
+
+  const answer = {
+    id: Date.now().toString(),
+    author: req.body.author || "Anonymous",
+    authorId: req.body.authorId || null,
+    body: req.body.body || "",
+    createdAt: Date.now()
+  };
+  p.answers.push(answer);
+  write(db);
+  res.json(answer);
+});
+
+/* vote on a poll option */
+app.post("/api/posts/:id/poll-vote", (req, res) => {
+  const db = read();
+  const p = (db.posts || []).find((x) => x.id === req.params.id);
+  if (!p) return res.status(404).json({ error: "Not found" });
+  if (p.type !== "poll") {
+    return res.status(400).json({ error: "Not a poll" });
+  }
+
+  const { uid, optionIndex } = req.body;
+  if (!uid) return res.status(400).json({ error: "uid required" });
+  if (p.voters.includes(uid)) {
+    return res.status(400).json({ error: "You already voted" });
+  }
+  if (!p.options[optionIndex]) {
+    return res.status(400).json({ error: "Invalid option" });
+  }
+
+  p.options[optionIndex].votes += 1;
+  p.voters.push(uid);
+  write(db);
+  res.json(p);
+});
+
+/* =====================================================
+   AI — /api/ai/*
+   ===================================================== */
+
+app.post("/api/ai/chat", async (req, res) => {
+  try {
+    const { messages } = req.body;
+    if (!Array.isArray(messages) || !messages.length) {
+      return res.status(400).json({ error: "messages required" });
+    }
+
+    const convo = messages
+      .map((m) => `${m.role === "user" ? "Student" : "Assistant"}: ${m.content}`)
+      .join("\n");
+
+    const prompt =
+      "You are a friendly study assistant for secondary school students. " +
+      "Answer clearly and simply. If asked to solve a problem, show the steps.\n\n" +
+      convo +
+      "\nAssistant:";
+
+    const reply = await askGemini(prompt);
+    res.json({ reply });
+  } catch (err) {
+    console.error("AI CHAT ERROR:", err.message);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.post("/api/ai/summarize", async (req, res) => {
+  try {
+    const { text } = req.body;
+    if (!text || text.trim().length < 20) {
+      return res.status(400).json({ error: "Text too short to summarize" });
+    }
+
+    const prompt =
+      "Summarize the following study notes for a secondary school student. " +
+      "Use short bullet points. Keep it clear and easy to revise from.\n\n" +
+      text;
+
+    const summary = await askGemini(prompt);
+    res.json({ summary });
+  } catch (err) {
+    console.error("AI SUMMARIZE ERROR:", err.message);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.post("/api/ai/flashcards", async (req, res) => {
+  try {
+    const { summary } = req.body;
+    if (!summary) return res.status(400).json({ error: "summary required" });
+
+    const prompt =
+      "Based on the study notes below, create 8 flashcards. " +
+      "Return ONLY a JSON array. No explanation. No markdown fences. " +
+      'Format: [{"front":"...","back":"..."}, ...]\n\n' +
+      "Notes:\n" +
+      summary;
+
+    const raw = await askGemini(prompt);
+    const clean = raw.replace(/```json|```/g, "").trim();
+
+    let cards;
+    try {
+      cards = JSON.parse(clean);
+    } catch {
+      return res.status(500).json({ error: "AI returned invalid JSON", raw });
+    }
+    res.json({ cards });
+  } catch (err) {
+    console.error("AI FLASHCARDS ERROR:", err.message);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.post("/api/ai/quiz", async (req, res) => {
+  try {
+    const { summary } = req.body;
+    if (!summary) return res.status(400).json({ error: "summary required" });
+
+    const prompt =
+      "Based on the study notes below, create 5 multiple-choice questions. " +
+      "Return ONLY a JSON array. No explanation. No markdown fences. " +
+      'Format: [{"question":"...","options":["A","B","C","D"],"answerIndex":0}, ...]\n\n' +
+      "Notes:\n" +
+      summary;
+
+    const raw = await askGemini(prompt);
+    const clean = raw.replace(/```json|```/g, "").trim();
+
+    let questions;
+    try {
+      questions = JSON.parse(clean);
+    } catch {
+      return res.status(500).json({ error: "AI returned invalid JSON", raw });
+    }
+    res.json({ questions });
+  } catch (err) {
+    console.error("AI QUIZ ERROR:", err.message);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.listen(PORT, () => {
+  console.log(`Server running at http://localhost:${PORT}`);
+});
+</file>
+
+<file path=".gitignore">
+# dependencies
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# env
+.env
+server/.env
+
+# build output
+client/dist/
+dist/
+
+# logs
+*.log
+npm-debug.log*
+
+# editor
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# local db backups
+db.backup.json
+</file>
+
+<file path="package.json">
+{
+  "name": "student-collab",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install --prefix server && npm install --prefix client",
+    "dev:server": "npm run dev --prefix server",
+    "dev:client": "npm run dev --prefix client",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "build": "npm run build --prefix client"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
+</file>
+
+<file path="README.MD">
+# Student Collab
+
+A study community for secondary school students. Ask questions, share notes,
+run polls, and study smarter with AI-powered summaries, flashcards and quizzes.
+
+## Stack
+
+- **Frontend:** React 18 + Vite, plain CSS, Firebase (compat SDK)
+- **Backend:** Node + Express, JSON file storage (`server/db.json`)
+- **AI:** Google Gemini (`gemini-flash-latest` with automatic fallback)
+- **Auth:** Firebase Authentication (email/password + Google)
+
+## Features
+
+- Firebase auth (email + Google)
+- Class feed with 4 post types: Message, Image (URL), Poll, Question
+- Upvotes, answers, poll voting
+- 4 tools:
+  - **Notepad** — auto-saving, PDF export via print
+  - **Calculator** — keyboard support, history
+  - **AI Assistant** — chat with Gemini
+  - **Study** — paste notes → summary → auto flashcards → quiz
+- Profile page with stats and recent activity
+
+## Project structure
+</file>
+
+</files>
