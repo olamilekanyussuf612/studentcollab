@@ -4,7 +4,7 @@ const fs = require("fs");
 const path = require("path");
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const DB = path.join(__dirname, "db.json");
 const GEMINI_KEY = process.env.GEMINI_API_KEY;
 
@@ -64,21 +64,6 @@ async function askGemini(prompt) {
 
 /* =====================================================
    FEED — /api/posts
-   Post shape:
-   {
-     id, type: "message" | "image" | "poll" | "question",
-     author, authorId,
-     text,           // message / question body / poll question / image caption
-     title,          // question only
-     subject,        // question only
-     imageUrl,       // image only
-     options: [],    // poll only -> [{ text, votes }]
-     voters: [],     // poll only -> [uid, ...]
-     votes,          // question/message upvotes
-     votersUp: [],   // who upvoted (question/message)
-     answers: [],    // question only
-     createdAt
-   }
    ===================================================== */
 
 app.get("/api/posts", (req, res) => {
@@ -299,6 +284,40 @@ app.post("/api/ai/quiz", async (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}`);
+/* =====================================================
+   SERVE BUILT REACT APP (production / Render)
+   ===================================================== */
+const clientBuildPath = path.join(__dirname, "..", "client", "dist");
+const clientIndex = path.join(clientBuildPath, "index.html");
+
+console.log("Looking for client build at:", clientBuildPath);
+console.log("Exists?", fs.existsSync(clientBuildPath));
+console.log("Index exists?", fs.existsSync(clientIndex));
+
+if (fs.existsSync(clientBuildPath)) {
+  app.use(express.static(clientBuildPath));
+}
+
+// SPA fallback — always responds, never 404s on /
+app.get("*", (req, res, next) => {
+  if (req.path.startsWith("/api/")) {
+    return res.status(404).json({ error: "API route not found" });
+  }
+  if (fs.existsSync(clientIndex)) {
+    return res.sendFile(clientIndex, (err) => {
+      if (err) next();
+    });
+  }
+  res
+    .status(500)
+    .send(
+      "Client build not found. Expected at: " +
+        clientIndex +
+        " — did the build step run?"
+    );
+});
+
+/* ---------- start ---------- */
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`Server running on port ${PORT}`);
 });
