@@ -1,5 +1,6 @@
 import { auth } from "../lib/firebase.js";
 import Avatar from "./Avatar.jsx";
+import Icon from "./Icon.jsx";
 
 export default function AppHeader({ user }) {
   const name = user.displayName || user.email || "Student";
@@ -7,7 +8,9 @@ export default function AppHeader({ user }) {
   return (
     <header className="app-header">
       <div className="app-header-left">
-        <div className="app-logo">📚</div>
+        <div className="app-logo">
+          <Icon name="book" />
+        </div>
         <span className="app-name">Student Collab</span>
       </div>
 

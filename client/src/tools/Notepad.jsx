@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import ConfirmDialog from "../components/ConfirmDialog.jsx";
+import Icon from "../components/Icon.jsx";
 import useConfirm from "../hooks/useConfirm.js";
 
 const STORAGE_KEY = "sc_notepad";
@@ -152,7 +153,7 @@ export default function Notepad() {
             disabled={!text.trim()}
             title="Save as PDF"
           >
-            ⬇ Download PDF
+            <Icon name="download" /> Download PDF
           </button>
           <button className="ghost-btn" onClick={clearAll} disabled={!text}>
             Clear

@@ -1,7 +1,9 @@
+import Icon from "./Icon.jsx";
+
 const TABS = [
-  { id: "home", label: "Home", icon: "🏠" },
-  { id: "tools", label: "Tools", icon: "🧰" },
-  { id: "profile", label: "Profile", icon: "👤" }
+  { id: "home", label: "Home", icon: "house" },
+  { id: "tools", label: "Tools", icon: "toolbox" },
+  { id: "profile", label: "Profile", icon: "user" }
 ];
 
 export default function AppNav({ view, onNavigate }) {
@@ -13,7 +15,7 @@ export default function AppNav({ view, onNavigate }) {
           className={view === t.id ? "nav-pill active" : "nav-pill"}
           onClick={() => onNavigate(t.id)}
         >
-          <span className="nav-icon">{t.icon}</span>
+          <Icon name={t.icon} className="nav-icon" />
           <span>{t.label}</span>
         </button>
       ))}

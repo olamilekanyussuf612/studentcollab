@@ -1,11 +1,12 @@
 import { useState } from "react";
 import api from "../lib/api.js";
+import Icon from "./Icon.jsx";
 
 const TABS = [
-  { id: "message", label: "Message", icon: "💬" },
-  { id: "image",   label: "Image",   icon: "🖼️" },
-  { id: "poll",    label: "Poll",    icon: "📊" },
-  { id: "question",label: "Question",icon: "❓" }
+  { id: "message", label: "Message", icon: "comment" },
+  { id: "image", label: "Image", icon: "image" },
+  { id: "poll", label: "Poll", icon: "chart-simple" },
+  { id: "question", label: "Question", icon: "circle-question" }
 ];
 
 export default function Composer({ user, onPosted }) {
@@ -101,7 +102,7 @@ export default function Composer({ user, onPosted }) {
             className={type === t.id ? "composer-tab active" : "composer-tab"}
             onClick={() => switchType(t.id)}
           >
-            <span className="tab-icon">{t.icon}</span>
+            <Icon name={t.icon} className="tab-icon" />
             <span className="tab-label">{t.label}</span>
           </button>
         ))}
@@ -143,7 +144,7 @@ export default function Composer({ user, onPosted }) {
                 onError={() => setPreviewOk(false)}
               />
               {previewOk === false && (
-                <p className="warn">⚠️ That URL didn't load as an image. You can still post it.</p>
+                <p className="warn"><Icon name="triangle-exclamation" /> That URL didn't load as an image. You can still post it.</p>
               )}
             </div>
           )}
@@ -180,7 +181,7 @@ export default function Composer({ user, onPosted }) {
                   onClick={() => removeOption(i)}
                   title="Remove"
                 >
-                  ✕
+                  <Icon name="xmark" />
                 </button>
               )}
             </div>
@@ -195,7 +196,7 @@ export default function Composer({ user, onPosted }) {
 
       {error && (
         <div className="alert error-alert">
-          <span>⚠️</span>
+          <Icon name="triangle-exclamation" />
           <span>{error}</span>
         </div>
       )}

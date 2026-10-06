@@ -2,25 +2,28 @@ import Notepad from "../tools/Notepad.jsx";
 import Calculator from "../tools/Calculator.jsx";
 import AIAssistant from "../tools/AIAssistant.jsx";
 import Study from "../tools/Study.jsx";
+import Icon from "../components/Icon.jsx";
 
 const META = {
-  notepad:   { title: "📝 Notepad" },
-  calc:      { title: "🧮 Calculator" },
-  assistant: { title: "🤖 AI Assistant" },
-  study:     { title: "🎓 Study" }
+  notepad: { title: "Notepad", icon: "pen-to-square" },
+  calc: { title: "Calculator", icon: "calculator" },
+  assistant: { title: "AI Assistant", icon: "robot" },
+  study: { title: "Study", icon: "graduation-cap" }
 };
 
 export default function ToolView({ tool, onBack }) {
-  const meta = META[tool] || { title: "Tool" };
+  const meta = META[tool] || { title: "Tool", icon: "toolbox" };
 
   return (
     <div className="tool-view">
       <button className="back-btn" onClick={onBack}>
-        <span aria-hidden>←</span> Back to Tools
+        <Icon name="arrow-left" /> Back to Tools
       </button>
 
       <div className="tool-view-head">
-        <h2>{meta.title}</h2>
+        <h2>
+          <Icon name={meta.icon} /> {meta.title}
+        </h2>
       </div>
 
       <div className="tool-body">

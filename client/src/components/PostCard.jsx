@@ -2,12 +2,13 @@ import { useState } from "react";
 import api from "../lib/api.js";
 import { timeAgo } from "../lib/format.js";
 import Avatar from "./Avatar.jsx";
+import Icon from "./Icon.jsx";
 
 const TYPE_META = {
-  message:  { label: "Message",  icon: "💬", tone: "neutral" },
-  image:    { label: "Image",    icon: "🖼️", tone: "neutral" },
-  poll:     { label: "Poll",     icon: "📊", tone: "info" },
-  question: { label: "Question", icon: "❓", tone: "warning" }
+  message: { label: "Message", icon: "comment", tone: "neutral" },
+  image: { label: "Image", icon: "image", tone: "neutral" },
+  poll: { label: "Poll", icon: "chart-simple", tone: "info" },
+  question: { label: "Question", icon: "circle-question", tone: "warning" }
 };
 
 export default function PostCard({ post, user, onChanged }) {
@@ -78,7 +79,7 @@ export default function PostCard({ post, user, onChanged }) {
           <div className="post-author">
             <span className="post-author-name">{authorName}</span>
             <span className={`type-badge tone-${meta.tone}`}>
-              <span aria-hidden>{meta.icon}</span> {meta.label}
+              <Icon name={meta.icon} /> {meta.label}
             </span>
           </div>
           <div className="post-sub">
@@ -150,7 +151,7 @@ export default function PostCard({ post, user, onChanged }) {
             className={`action-btn${voted ? " voted" : ""}`}
             onClick={vote}
           >
-            <span aria-hidden>▲</span>
+            <Icon name="arrow-up" />
             <span>{post.votes || 0}</span>
             <span className="action-label">{voted ? "Voted" : "Upvote"}</span>
           </button>
@@ -161,7 +162,7 @@ export default function PostCard({ post, user, onChanged }) {
               className="action-btn"
               onClick={() => setShowAnswers((s) => !s)}
             >
-              <span aria-hidden>💬</span>
+              <Icon name="comment" />
               <span>{post.answers?.length || 0}</span>
               <span className="action-label">
                 {showAnswers ? "Hide answers" : "Answers"}

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import api from "../lib/api.js";
 import ConfirmDialog from "../components/ConfirmDialog.jsx";
+import Icon from "../components/Icon.jsx";
 import useConfirm from "../hooks/useConfirm.js";
 
 const STORAGE_KEY = "latestSummary";
@@ -172,7 +173,7 @@ export default function Study() {
           />
           {error && (
             <div className="alert error-alert">
-              <span>⚠️</span>
+              <Icon name="triangle-exclamation" />
               <span>{error}</span>
             </div>
           )}
@@ -204,9 +205,9 @@ export default function Study() {
             >
               <h3>
                 <span className="collapse-chevron" aria-hidden>
-                  {showSummary ? "▾" : "▸"}
+                  <Icon name={showSummary ? "chevron-down" : "chevron-right"} />
                 </span>{" "}
-                📌 Summary
+                <Icon name="thumbtack" /> Summary
               </h3>
               <div
                 className="study-block-actions"
@@ -235,9 +236,9 @@ export default function Study() {
             >
               <h3>
                 <span className="collapse-chevron" aria-hidden>
-                  {showCards ? "▾" : "▸"}
+                  <Icon name={showCards ? "chevron-down" : "chevron-right"} />
                 </span>{" "}
-                🎴 Flashcards
+                <Icon name="clone" /> Flashcards
                 {cards.length > 0 && (
                   <span
                     className="muted"
@@ -311,7 +312,7 @@ export default function Study() {
                         }}
                         disabled={cardIdx === 0}
                       >
-                        ← Prev
+                        <Icon name="arrow-left" /> Prev
                       </button>
                       <button
                         className="ghost-btn"
@@ -321,7 +322,7 @@ export default function Study() {
                         }}
                         disabled={cardIdx === cards.length - 1}
                       >
-                        Next →
+                        Next <Icon name="arrow-right" />
                       </button>
                     </div>
                   </>
@@ -336,7 +337,7 @@ export default function Study() {
 
           <section className="study-block">
             <div className="study-block-head">
-              <h3>❓ Quiz</h3>
+              <h3><Icon name="circle-question" /> Quiz</h3>
               {quiz.length > 0 && !quizDone && (
                 <span className="muted">
                   Question {quizIdx + 1} / {quiz.length}
@@ -390,7 +391,7 @@ export default function Study() {
                     <button className="primary-btn" onClick={nextQuestion}>
                       {quizIdx + 1 >= quiz.length
                         ? "See results"
-                        : "Next question →"}
+                        : <>Next question <Icon name="arrow-right" /></>}
                     </button>
                   </div>
                 )}
@@ -425,7 +426,7 @@ export default function Study() {
 
       {error && summary && (
         <div className="alert error-alert">
-          <span>⚠️</span>
+          <Icon name="triangle-exclamation" />
           <span>{error}</span>
         </div>
       )}

@@ -4,6 +4,7 @@ import { PostSkeleton } from "../components/Skeleton.jsx";
 import EmptyState from "../components/EmptyState.jsx";
 import Composer from "../components/Composer.jsx";
 import PostCard from "../components/PostCard.jsx";
+import Icon from "../components/Icon.jsx";
 
 export default function Home({ user }) {
   const [posts, setPosts] = useState([]);
@@ -47,14 +48,14 @@ export default function Home({ user }) {
 
       {!loading && error && (
         <div className="alert error-alert">
-          <span>⚠️</span>
+          <Icon name="triangle-exclamation" />
           <span>Couldn't load the feed: {error}</span>
         </div>
       )}
 
       {!loading && !error && posts.length === 0 && (
         <EmptyState
-          emoji="👋"
+          emoji="hand-wave"
           title="Your feed is empty"
           message="Be the first to share something with your classmates."
         />

@@ -2,12 +2,13 @@ import { useState, useEffect } from "react";
 import api from "../lib/api.js";
 import { timeAgo } from "../lib/format.js";
 import Avatar from "../components/Avatar.jsx";
+import Icon from "../components/Icon.jsx";
 
 const TYPE_META = {
-  message:  { label: "Message",  icon: "💬" },
-  image:    { label: "Image",    icon: "🖼️" },
-  poll:     { label: "Poll",     icon: "📊" },
-  question: { label: "Question", icon: "❓" }
+  message: { label: "Message", icon: "comment" },
+  image: { label: "Image", icon: "image" },
+  poll: { label: "Poll", icon: "chart-simple" },
+  question: { label: "Question", icon: "circle-question" }
 };
 
 export default function Profile({ user }) {
@@ -44,8 +45,8 @@ export default function Profile({ user }) {
           <h1>{name}</h1>
           <p className="muted">{email}</p>
           <div className="profile-badges">
-            <span className="chip">🔐 Signed in with {provider}</span>
-            {user.emailVerified && <span className="chip ok">✔ Verified</span>}
+            <span className="chip"><Icon name="lock" /> Signed in with {provider}</span>
+            {user.emailVerified && <span className="chip ok"><Icon name="circle-check" /> Verified</span>}
           </div>
         </div>
       </div>
@@ -80,7 +81,7 @@ export default function Profile({ user }) {
 
         {!loading && mine.length === 0 && (
           <div className="profile-empty">
-            <div className="empty-emoji">📭</div>
+            <div className="empty-emoji"><Icon name="inbox" /></div>
             <h3>No posts yet</h3>
             <p className="muted">
               Head over to Home and share your first post.
@@ -100,8 +101,8 @@ export default function Profile({ user }) {
                     : p.text;
               return (
                 <li key={p.id} className="activity-item">
-                  <span className="activity-icon" aria-hidden>
-                    {meta.icon}
+                  <span className="activity-icon">
+                    <Icon name={meta.icon} />
                   </span>
                   <div className="activity-meta">
                     <div className="activity-type">{meta.label}</div>

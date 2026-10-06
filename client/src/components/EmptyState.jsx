@@ -1,5 +1,7 @@
+import Icon from "./Icon.jsx";
+
 export default function EmptyState({
-  emoji = "✨",
+  emoji = "sparkles",
   title = "Nothing here yet",
   message = "",
   actionLabel,
@@ -7,7 +9,7 @@ export default function EmptyState({
 }) {
   return (
     <div className="empty-state">
-      <div className="empty-emoji">{emoji}</div>
+      <div className="empty-emoji"><Icon name={emoji} /></div>
       <h3>{title}</h3>
       {message && <p>{message}</p>}
       {actionLabel && onAction && (

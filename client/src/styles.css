@@ -13,6 +13,13 @@ body {
 a { color: #2563eb; text-decoration: none; }
 a:hover { text-decoration: underline; }
 
+/* Font Awesome icon defaults */
+.fa-solid,
+.fa-regular,
+.fa-brands {
+  line-height: 1;
+}
+
 /* =====================================================
    LOADING SCREEN
    ===================================================== */
@@ -43,6 +50,8 @@ a:hover { text-decoration: underline; }
   background: #fff;
   box-shadow: 0 8px 28px rgba(37, 99, 235, 0.15);
 }
+
+.loading-mark .fa-solid { font-size: 36px; color: #2563eb; }
 
 .loading-brand h1 {
   font-size: 22px;
@@ -133,8 +142,9 @@ a:hover { text-decoration: underline; }
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 20px;
 }
+
+.brand-panel-logo .fa-solid { font-size: 20px; color: #fff; }
 
 .brand-panel-name {
   font-weight: 600;
@@ -422,8 +432,9 @@ header button {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
 }
+
+.app-logo .fa-solid { font-size: 18px; color: #2563eb; }
 
 .app-name {
   font-weight: 600;
@@ -523,6 +534,12 @@ header button {
 .nav-pill:active { transform: translateY(1px); }
 
 .nav-icon { font-size: 14px; line-height: 1; }
+
+.tool-icon { font-size: 24px; color: #2563eb; }
+.nav-icon { font-size: 14px; }
+.tab-icon { font-size: 13px; }
+.activity-icon .fa-solid { color: #2563eb; }
+.empty-emoji .fa-solid { font-size: 32px; color: #2563eb; }
 
 /* ---------- main ---------- */
 .app-main {
@@ -2300,33 +2317,6 @@ header button {
   to   { background-position: 42px 42px, 42px 42px; }
 }
 
-/* floating emoji in the background */
-.brand-floaters {
-  position: absolute;
-  inset: 0;
-}
-
-.floater {
-  position: absolute;
-  font-size: 26px;
-  opacity: 0.14;
-  filter: blur(0.4px);
-  animation: floatUp 14s ease-in-out infinite;
-}
-
-.floater.f1 { left: 12%;  bottom: -30px; animation-delay: 0s; }
-.floater.f2 { left: 32%;  bottom: -30px; animation-delay: 3s; }
-.floater.f3 { left: 52%;  bottom: -30px; animation-delay: 6s; }
-.floater.f4 { left: 72%;  bottom: -30px; animation-delay: 2s; }
-.floater.f5 { left: 88%;  bottom: -30px; animation-delay: 8s; }
-
-@keyframes floatUp {
-  0%   { transform: translateY(0) rotate(0deg); opacity: 0; }
-  15%  { opacity: 0.16; }
-  85%  { opacity: 0.16; }
-  100% { transform: translateY(-100vh) rotate(30deg); opacity: 0; }
-}
-
 /* ----- content over background ----- */
 .brand-panel > *:not(.brand-bg) {
   position: relative;
@@ -2493,7 +2483,6 @@ header button {
 @media (prefers-reduced-motion: reduce) {
   .brand-orb,
   .brand-grid,
-  .floater,
   .brand-panel-logo,
   .brand-panel-logo::after,
   .brand-accent,

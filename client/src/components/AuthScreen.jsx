@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { auth, googleProvider } from "../lib/firebase.js";
 import BrandPanel from "./BrandPanel.jsx";
+import Icon from "./Icon.jsx";
 
 export default function AuthScreen() {
   const [mode, setMode] = useState("login");
@@ -114,7 +115,7 @@ export default function AuthScreen() {
 
             {error && (
               <div className="alert error-alert">
-                <span>⚠️</span>
+                <Icon name="triangle-exclamation" />
                 <span>{error}</span>
               </div>
             )}

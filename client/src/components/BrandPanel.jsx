@@ -1,3 +1,5 @@
+import Icon from "./Icon.jsx";
+
 export default function BrandPanel() {
   return (
     <aside className="brand-panel">
@@ -7,17 +9,12 @@ export default function BrandPanel() {
         <div className="brand-orb orb-2" />
         <div className="brand-orb orb-3" />
         <div className="brand-grid" />
-        <div className="brand-floaters">
-          <span className="floater f1">📚</span>
-          <span className="floater f2">📝</span>
-          <span className="floater f3">🎴</span>
-          <span className="floater f4">🤖</span>
-          <span className="floater f5">🧮</span>
-        </div>
       </div>
 
       <div className="brand-panel-top">
-        <div className="brand-panel-logo">📚</div>
+        <div className="brand-panel-logo">
+          <Icon name="book" />
+        </div>
         <span className="brand-panel-name">Student Collab</span>
       </div>
 
@@ -31,16 +28,16 @@ export default function BrandPanel() {
         </p>
         <ul className="brand-panel-list">
           <li style={{ animationDelay: "0.35s" }}>
-            <span className="bullet" /> 📖 Subject feeds &amp; discussions
+            <span className="bullet" /> Subject feeds &amp; discussions
           </li>
           <li style={{ animationDelay: "0.45s" }}>
-            <span className="bullet" /> 📝 Notes, resources &amp; images
+            <span className="bullet" /> Notes, resources &amp; images
           </li>
           <li style={{ animationDelay: "0.55s" }}>
-            <span className="bullet" /> 🤖 AI study assistant
+            <span className="bullet" /> AI study assistant
           </li>
           <li style={{ animationDelay: "0.65s" }}>
-            <span className="bullet" /> 🎴 Flashcards &amp; quizzes
+            <span className="bullet" /> Flashcards &amp; quizzes
           </li>
         </ul>
       </div>

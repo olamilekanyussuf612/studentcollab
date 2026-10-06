@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import api from "../lib/api.js";
 import ConfirmDialog from "../components/ConfirmDialog.jsx";
+import Icon from "../components/Icon.jsx";
 import useConfirm from "../hooks/useConfirm.js";
 
 const SUGGESTIONS = [
@@ -51,8 +52,7 @@ export default function AIAssistant() {
         ...next,
         {
           role: "assistant",
-          content:
-            "⚠️ I couldn't reach the AI right now. Please try again in a moment."
+          content: "I couldn't reach the AI right now. Please try again in a moment."
         }
       ]);
     } finally {
@@ -98,7 +98,7 @@ export default function AIAssistant() {
             >
               {m.role === "assistant" && (
                 <div className="ai-avatar" aria-hidden>
-                  🤖
+                  <Icon name="robot" />
                 </div>
               )}
               <div className={`ai-bubble ${m.role}`}>{m.content}</div>
@@ -108,7 +108,7 @@ export default function AIAssistant() {
           {busy && (
             <div className="ai-row ai">
               <div className="ai-avatar" aria-hidden>
-                🤖
+                <Icon name="robot" />
               </div>
               <div className="ai-bubble ai typing">
                 <span className="typing-dot" />
@@ -139,7 +139,7 @@ export default function AIAssistant() {
 
         {error && (
           <div className="alert error-alert" style={{ margin: "0 12px 8px" }}>
-            <span>⚠️</span>
+            <Icon name="triangle-exclamation" />
             <span>{error}</span>
           </div>
         )}
